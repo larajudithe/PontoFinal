@@ -1,107 +1,89 @@
-/*using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DragDrop : MonoBehaviour
-{
-    [SerializeField] private GameObject objectToDrag; 
-    [SerializeField] private GameObject ObjectDragToPos;
-    [SerializeField] private float Dropistance;
-    [SerializeField] private bool isLockead;
-    Vector2 objectInitPos;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-         objectInitPos = objectToDrag.transform.position;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void DragObject()
-    {
-        if (!isLockead)
-        {
-            objectToDrag.transform.position = Input.mousePosition; //INPUT ANTIGO
-
-        }
-    }
-    public void DropObjects()
-    {
-        float Distance = Vector3.Distance(objectToDrag.transform.position, ObjectDragToPos.transform.position);
-        if(Distance < Dropistance)
-        {
-            isLockead = true;
-            objectToDrag.transform.position = ObjectDragToPos.transform.position;
-        }
-        else
-        {
-            objectToDrag.transform.position = objectInitPos;
-        }
-    }
-}
-*/
-
-using UnityEngine;
-using UnityEngine.InputSystem; 
 
 public class DragDrop : MonoBehaviour
 {
-    [SerializeField] private GameObject objectToDrag; 
-    [SerializeField] private GameObject ObjectDragToPos;
-    [SerializeField] private float Dropistance;
-    [SerializeField] private bool isLockead;
-    
-    private Camera mainCamera;
-    Vector2 objectInitPos;
-
-    void Start()
-    {
-        objectInitPos = objectToDrag.transform.position;
-        // Captura a cAmera principal para converter a posição do mouse
-        mainCamera = Camera.main; 
-    }
-
-    public void DragObject()
-    //                                                  ERRO ERRO ERRO ERRO ERRO  
-
-    //PROBLEMA AQUI: worldPosition é o problema, é necessario achar um jeito de converter ele de um jeito q ele fique usável pro canva.
-
-    // SOLUÇÃO:  canvas usa Screen Space, que usa das coodernada "RectTransform ", entao se ainda quiser usar esse termo é necessario 
-    // a conversão (ou da pra encontrar um outro termo que substitua ele)
-
-    //FAZER SOLUÇÃO ASSIM Q POSSIVEL !!
-
-    {
-        if (!isLockead) 
-        {
-            //le a posição atual do mouse ou toque na tela
-            Vector2 mouseScreenPosition = Pointer.current.position.ReadValue();
-
-            // Converte a posição da tela para coordenadas do mundo do jogo (3D/2D)
-            Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, 10f));
-            
-            // Mantém o Z original do objeto para evitar problemas de renderização
-            worldPosition.z = objectToDrag.transform.position.z; 
-
-            objectToDrag.transform.position = worldPosition;
-        }
-    }
-
-    public void DropObjects()
-    {
-        float Distance = Vector3.Distance(objectToDrag.transform.position, ObjectDragToPos.transform.position);
-        if(Distance < Dropistance)
-        {
-            isLockead = true;
-            objectToDrag.transform.position = ObjectDragToPos.transform.position;
-        }
-        else
-        {
-            objectToDrag.transform.position = objectInitPos;
-        }
-    }
+    [Header("Referências")]
+    [SerializeField] private RectTransform objectToDrag;
+    [SerializeField] private RectTransform objectDragToPos;
    
-}
+    [Header("Configurações")]
+    [SerializeField] private float dropDistance = 30f;
+   
+    private Canvas canvas;
+    private Camera mainCamera;
+    private Vector2 objectInitAnchoredPos;
+    private bool isLocked;
+    private int pontos;
 
+
+    void Start()
+    {
+        // Encontra o Canvas pai automaticamente
+        canvas = GetComponentInParent<Canvas>();
+       
+        if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+        {
+            mainCamera = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
+        }
+        
+
+
+        if (objectToDrag != null)
+        {
+            // Salva a posição inicial ancorada (independe do tamanho/resolução da tela)
+            objectInitAnchoredPos = objectToDrag.anchoredPosition;
+        }
+    }
+
+
+    public void DragObject()
+    {
+        if (isLocked || objectToDrag == null || canvas == null) return;
+
+
+        // pega a posicao do ponteiro em pixels da tela
+        Vector2 mouseScreenPosition = Pointer.current.position.ReadValue();
+
+
+        // converte a posição da tela para a posição exata dentro do canvas
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvas.transform as RectTransform,
+            mouseScreenPosition,
+            mainCamera,
+            out Vector2 localPoint
+        );
+
+
+        // move o objeto na UI
+        objectToDrag.anchoredPosition = localPoint;
+    }
+
+
+    public void DropObjects()
+    {
+        if (isLocked || objectToDrag == null || objectDragToPos == null) return;
+
+
+        // calcula a distância diretamente entre as posições ancoradas na UI
+        float distance = Vector2.Distance(objectToDrag.anchoredPosition, objectDragToPos.anchoredPosition);
+
+
+        if (distance <= dropDistance)
+        {
+            isLocked = true;
+            // encaixa perfeitamente na posição do alvo
+            objectToDrag.anchoredPosition = objectDragToPos.anchoredPosition;
+            //pontos++;
+        }
+        else
+        {
+            // retorna para a posição inicial
+            objectToDrag.anchoredPosition = objectInitAnchoredPos;
+        }
+    }
+     //public void DropObjects()
+
+
+}
