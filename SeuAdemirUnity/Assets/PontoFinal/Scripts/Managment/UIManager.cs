@@ -1,17 +1,20 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
     [SerializeField] private GameObject interactCursor;
     [SerializeField] private Image InterativoImage;
+    [SerializeField] private InputAction openInventory;
     void Start()
     {
         
     }
     private void Awake()
     {
+        openInventory = InputSystem.actions.FindAction("OpenInventory");
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
@@ -23,7 +26,10 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        
+        if (openInventory.WasPressedThisFrame())
+        {
+            Debug.Log("Abrindo inventário");
+        }
     }
     public void ChangeInteract(bool stage)
     {

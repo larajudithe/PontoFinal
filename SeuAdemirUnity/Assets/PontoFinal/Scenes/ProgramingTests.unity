@@ -353,7 +353,6 @@ GameObject:
   - component: {fileID: 794712967}
   - component: {fileID: 794712971}
   - component: {fileID: 794712972}
-  - component: {fileID: 794712973}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -510,18 +509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa9150af1d09d7e41a333e8bbb808da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SadBoy
---- !u!114 &794712973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794712966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f3974c6d6eab2b4aa9ede71a045193e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroyObjeto
 --- !u!1 &909625403
 GameObject:
   m_ObjectHideFlags: 0
