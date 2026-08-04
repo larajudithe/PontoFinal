@@ -15,7 +15,6 @@ public class PlayerInteractions : MonoBehaviour
     private ObjectInterativo currentInteraction;
     public UnityEvent StopMovimentation;
     public UnityEvent StartMovimentation;
-    private PlayerInventory playerInventory;
     private bool canFinish = false;
     private Interativos currentInterativo;
     [SerializeField] int rotationSpeed;
@@ -28,7 +27,6 @@ public class PlayerInteractions : MonoBehaviour
     private bool isInteracting = false;
     void Start()
     {
-        playerInventory = GetComponent<PlayerInventory>();
         myCamera = Camera.main;
         interactAction = InputSystem.actions.FindAction("RotateInteract");
         stopAction = InputSystem.actions.FindAction("StopInteract");
@@ -135,6 +133,11 @@ public class PlayerInteractions : MonoBehaviour
         canFinish = false;
         isInteracting = false;
         UIManager.Instance.SetInterativoImage(null, false);
+        if (currentInterativo.inventoryItem)
+        {
+            PlayerInventory.Instance.AddItem(currentInterativo);
+            currentInteraction.OnCollectObjeto.Invoke();
+        }
         if (currentInterativo.pegavel)
         {
             currentInteraction.transform.rotation = objOriginRotate;
@@ -159,7 +162,6 @@ public class PlayerInteractions : MonoBehaviour
     private void RotateObject()
     {
         Vector2 rotateLook = mouseLook.ReadValue<Vector2>();
-        Debug.Log(rotateLook);
         currentInteraction.transform.Rotate(myCamera.transform.right, -Mathf.Deg2Rad * rotateLook.y * rotationSpeed, Space.World);
         currentInteraction.transform.Rotate(myCamera.transform.up, -Mathf.Deg2Rad * rotateLook.x * rotationSpeed, Space.World);
     }
