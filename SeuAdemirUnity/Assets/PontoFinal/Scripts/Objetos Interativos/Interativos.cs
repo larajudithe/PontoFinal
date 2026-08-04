@@ -5,6 +5,7 @@ public class Interativos : ScriptableObject
 {
     public string texto;
     public bool pegavel;
+    public bool carregavel;
     public AudioClip audio;
     public Sprite image;
 

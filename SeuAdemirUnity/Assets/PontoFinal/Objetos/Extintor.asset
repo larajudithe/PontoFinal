@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interativos
   texto: 
   pegavel: 1
+  carregavel: 1
   audio: {fileID: 0}
   image: {fileID: 0}
   inventoryItem: 1
