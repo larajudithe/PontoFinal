@@ -87,7 +87,7 @@ public class PlayerInteractions : MonoBehaviour
         Debug.Log("Começou interação");
         currentInteraction = objeto;
         currentInteraction.OnInteract.Invoke();
-        extintor.FollowPlayer();
+        //extintor.FollowPlayer();
         if (currentInteraction.GetInterativo() != null)
         {
             StopMovimentation.Invoke();

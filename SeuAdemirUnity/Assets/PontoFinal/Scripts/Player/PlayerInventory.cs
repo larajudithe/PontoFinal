@@ -23,11 +23,8 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log("Item já está no invetário");
             return;
         }
+        UIManager.Instance.SetItens(item, inventarioInts.Count);
         inventarioInts.Add(item);
-        foreach (Interativos interativo in inventarioInts)
-        {
-            Debug.Log("Item no inventário: " + interativo.collectMessage);
-        }
     }
     public bool CheckItem(Interativos item)
     {

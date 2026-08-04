@@ -1,13 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
     [SerializeField] private GameObject interactCursor;
     [SerializeField] private Image InterativoImage;
+    [SerializeField] private GameObject inventoryUI;
     [SerializeField] private InputAction openInventory;
+    [SerializeField] private TextMeshProUGUI[] inventoryText;
     void Start()
     {
         
@@ -28,7 +31,7 @@ public class UIManager : MonoBehaviour
     {
         if (openInventory.WasPressedThisFrame())
         {
-            Debug.Log("Abrindo inventário");
+            inventoryUI.SetActive(!inventoryUI.activeInHierarchy);
         }
     }
     public void ChangeInteract(bool stage)
@@ -39,5 +42,9 @@ public class UIManager : MonoBehaviour
     {
         InterativoImage.sprite = sprite;
         InterativoImage.enabled = state;
+    }
+    public void SetItens(Interativos interativo, int index)
+    {
+        inventoryText[index].text = "-"+interativo.collectMessage;
     }
 }
