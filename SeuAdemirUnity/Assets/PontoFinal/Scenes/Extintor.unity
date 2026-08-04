@@ -211,11 +211,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8324486820916387199, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: openInventory.m_Name
+      value: Open Inventory
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+--- !u!4 &287261046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 295190024449072755, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+  m_PrefabInstance: {fileID: 1424865211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &409267488
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290,6 +299,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d90d9ed66310ded45a0ef41901053c6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 409267491}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d90d9ed66310ded45a0ef41901053c6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 409267492}
   m_SourcePrefab: {fileID: 100100000, guid: d90d9ed66310ded45a0ef41901053c6b, type: 3}
 --- !u!1 &409267489 stripped
 GameObject:
@@ -314,8 +326,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 409267491}
         m_TargetAssemblyTypeName: Extintor, Assembly-CSharp
-        m_MethodName: set_enabled
-        m_Mode: 6
+        m_MethodName: FollowPlayer
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -324,6 +336,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnCollectObjeto:
+    m_PersistentCalls:
+      m_Calls: []
   intAnteriores: []
 --- !u!114 &409267491
 MonoBehaviour:
@@ -337,6 +352,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63503665e6827de47914ecfb57f37af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
+  Player: {fileID: 287261046}
+--- !u!64 &409267492
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409267489}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -3292925553009838691, guid: d90d9ed66310ded45a0ef41901053c6b, type: 3}
 --- !u!1001 &640222475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -355,7 +393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4808692270750588962, guid: 007c21f7ac355ea4b8e89bdf7a6a1a62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.579
+      value: -0.15100002
       objectReference: {fileID: 0}
     - target: {fileID: 4808692270750588962, guid: 007c21f7ac355ea4b8e89bdf7a6a1a62, type: 3}
       propertyPath: m_LocalPosition.z
@@ -613,7 +651,7 @@ Transform:
   m_GameObject: {fileID: 1196485539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.39819, y: 0.579, z: 8.59422}
+  m_LocalPosition: {x: -5.39819, y: -0.15100002, z: 8.59422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,7 +860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 295190024449072755, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.73
       objectReference: {fileID: 0}
     - target: {fileID: 295190024449072755, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: m_LocalPosition.z
@@ -860,6 +898,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5259990199197609123, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+      propertyPath: rayDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5259990199197609123, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+      propertyPath: ExtintorScript
+      value: 
+      objectReference: {fileID: 409267491}
     - target: {fileID: 5259990199197609123, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: StopMovimentation.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

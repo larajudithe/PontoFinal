@@ -22,6 +22,7 @@ public class PlayerInteractions : MonoBehaviour
     private Vector3 objOriginPosition = new Vector3();
     private Quaternion objOriginRotate = new Quaternion();
     [SerializeField] private Transform viewPoint;
+    [SerializeField] public Extintor ExtintorScript;
 
 
     private bool isInteracting = false;
@@ -86,6 +87,7 @@ public class PlayerInteractions : MonoBehaviour
         Debug.Log("Começou interação");
         currentInteraction = objeto;
         currentInteraction.OnInteract.Invoke();
+        ExtintorScript.FollowPlayer();
         if (currentInteraction.GetInterativo() != null)
         {
             if (!currentInteraction.GetInterativo().carregavel)
@@ -143,6 +145,7 @@ public class PlayerInteractions : MonoBehaviour
         canFinish = false;
         isInteracting = false;
         UIManager.Instance.SetInterativoImage(null, false);
+        ExtintorScript.ExitPlayer();
         if (currentInterativo.inventoryItem)
         {
             PlayerInventory.Instance.AddItem(currentInterativo);
