@@ -91,13 +91,20 @@ public class PlayerInteractions : MonoBehaviour
             StopMovimentation.Invoke();
             isInteracting = true;
             bool hasPreviousItem = false;
-            /*for (int i = 0; i < currentInteraction.IntAnterioresLenght(); i++)
+            for (int i = 0; i < currentInteraction.IntAnterioresLenght(); i++)
             {
-                if(playerInventory.CheckItem(currentInteraction.GetIntAnteriores(i).GetItemRequirido()))
+                if(PlayerInventory.Instance.CheckItem(currentInteraction.GetIntAnteriores(i).GetItemRequirido()))
                 {
                     Interact(currentInteraction.GetIntAnteriores(i).GetInterativoAtual());
+                    currentInteraction.GetIntAnteriores(i).OnInteractAtual.Invoke();
+                    hasPreviousItem = true;
+                    break;
                 }
-            }*/
+            }
+            if (hasPreviousItem)
+            {
+                return;
+            }
             Interact(currentInteraction.GetInterativo());
             if (currentInteraction.GetInterativo().pegavel)
             {

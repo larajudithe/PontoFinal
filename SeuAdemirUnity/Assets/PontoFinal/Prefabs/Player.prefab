@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 1057834655664170062}
   - component: {fileID: 2258359007316219258}
   - component: {fileID: 5259990199197609123}
+  - component: {fileID: 1988081355923363771}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -262,6 +263,19 @@ MonoBehaviour:
         m_CallState: 2
   rotationSpeed: 20
   viewPoint: {fileID: 8914640890675570978}
+--- !u!114 &1988081355923363771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880154656995208322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e86ab1c42ff2fb642af7a1cbe0bff6e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  inventarioInts: []
 --- !u!1 &4912043558016129436
 GameObject:
   m_ObjectHideFlags: 0
