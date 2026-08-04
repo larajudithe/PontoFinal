@@ -23,6 +23,7 @@ public class PlayerInteractions : MonoBehaviour
     private Vector3 objOriginPosition = new Vector3();
     private Quaternion objOriginRotate = new Quaternion();
     [SerializeField] private Transform viewPoint;
+    GameObject extintor;
 
 
     private bool isInteracting = false;
@@ -88,6 +89,7 @@ public class PlayerInteractions : MonoBehaviour
         Debug.Log("Começou interação");
         currentInteraction = objeto;
         currentInteraction.OnInteract.Invoke();
+        extintor.FollowPlayer();
         if (currentInteraction.GetInterativo() != null)
         {
             StopMovimentation.Invoke();
