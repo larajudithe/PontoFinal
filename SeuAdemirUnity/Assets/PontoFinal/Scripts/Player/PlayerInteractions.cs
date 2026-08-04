@@ -88,7 +88,10 @@ public class PlayerInteractions : MonoBehaviour
         currentInteraction.OnInteract.Invoke();
         if (currentInteraction.GetInterativo() != null)
         {
-            StopMovimentation.Invoke();
+            if (!currentInteraction.GetInterativo().carregavel)
+            {
+                StopMovimentation.Invoke();
+            }
             isInteracting = true;
             bool hasPreviousItem = false;
             for (int i = 0; i < currentInteraction.IntAnterioresLenght(); i++)
