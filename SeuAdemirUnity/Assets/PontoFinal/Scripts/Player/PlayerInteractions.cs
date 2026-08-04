@@ -113,7 +113,7 @@ public class PlayerInteractions : MonoBehaviour
             {
                 objOriginPosition = currentInteraction.transform.position;
                 objOriginRotate = currentInteraction.transform.rotation;
-                StartCoroutine(MovingObject(currentInteraction, viewPoint.position));
+                StartCoroutine(currentInteraction.MovingObject(viewPoint.position));
             }
         }
     }
@@ -151,23 +151,9 @@ public class PlayerInteractions : MonoBehaviour
         if (currentInterativo.pegavel)
         {
             currentInteraction.transform.rotation = objOriginRotate;
-            StartCoroutine(MovingObject(currentInteraction, objOriginPosition));
+            StartCoroutine(currentInteraction.MovingObject(objOriginPosition));
         }
         StartMovimentation.Invoke();
-    }
-    private IEnumerator MovingObject(ObjectInterativo obj, Vector3 finalPosition)
-    {
-        Debug.Log("Movendo objeto");
-        obj.ChangeMoving(true);
-        float time = 0f;
-        while (time < 1f)
-        {
-            time += Time.deltaTime;
-            obj.transform.position = Vector3.Lerp(obj.transform.position, finalPosition, time * 5);
-            yield return null;
-        }
-        obj.transform.position = finalPosition;
-        obj.ChangeMoving(false);
     }
     private void RotateObject()
     {
@@ -177,7 +163,6 @@ public class PlayerInteractions : MonoBehaviour
     }
 
     // Tirar numeros mágicos
-    // Invetario e Previows itens
     // Trocar Moving par ao Objeto
     // Tirar o publica do Interativos
 }
