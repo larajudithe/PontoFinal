@@ -8,6 +8,7 @@ public class ObjectInterativo : MonoBehaviour
     [SerializeField] private Interativos interativo;
     private bool isMoving = false;
     public UnityEvent OnInteract;
+    public UnityEvent OnCollectObjeto;
     [SerializeField] private InterativosAnteriores[] intAnteriores;
 
     // Update is called once per frame
