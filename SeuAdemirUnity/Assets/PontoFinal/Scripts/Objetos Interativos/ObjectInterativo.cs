@@ -2,6 +2,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 public class ObjectInterativo : MonoBehaviour
 {
@@ -10,19 +11,9 @@ public class ObjectInterativo : MonoBehaviour
     public UnityEvent OnInteract;
     public UnityEvent OnCollectObjeto;
     [SerializeField] private InterativosAnteriores[] intAnteriores;
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public Interativos GetInterativo()
     {
         return interativo;
-    }
-    public void ChangeMoving(bool state)
-    {
-        isMoving = state;
     }
     public bool GetMoving()
     {
@@ -35,6 +26,20 @@ public class ObjectInterativo : MonoBehaviour
     public InterativosAnteriores GetIntAnteriores(int index)
     {
         return intAnteriores[index];
+    }
+    public IEnumerator MovingObject(Vector3 finalPosition)
+    {
+        Debug.Log("Movendo objeto");
+        isMoving = true;
+        float time = 0f;
+        while (time < 1f)
+        {
+            time += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, finalPosition, time * 5);
+            yield return null;
+        }
+        transform.position = finalPosition;
+        isMoving = false;
     }
 }
 [System.Serializable]
@@ -52,3 +57,5 @@ public class InterativosAnteriores
         return interativoAtual;
     }
 }
+
+
