@@ -19,6 +19,7 @@ public class Extintor : MonoBehaviour
     }
     public void FollowPlayer()
     {
+        // StartMovimentation.Invoke();
         transform.position = Player.position + offset;
     }
 }
