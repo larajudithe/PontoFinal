@@ -15,7 +15,7 @@ public class DragDrop : MonoBehaviour
     private Camera mainCamera;
     private Vector2 objectInitAnchoredPos;
     private bool isLocked;
-    private int pontos;
+    private int pontos =0;
 
 
     void Start()
@@ -76,6 +76,12 @@ public class DragDrop : MonoBehaviour
             // encaixa perfeitamente na posição do alvo
             objectToDrag.anchoredPosition = objectDragToPos.anchoredPosition;
             //pontos++;
+            pontos = pontos + 1;
+            if (pontos == 4)
+            {
+               Debug.Log("COMPLETOU");
+            }
+              
         }
         else
         {
@@ -83,7 +89,9 @@ public class DragDrop : MonoBehaviour
             objectToDrag.anchoredPosition = objectInitAnchoredPos;
         }
     }
-     //public void DropObjects()
+  //  public void Pontos()
+  //  {
+  //  }
 
 
 }
