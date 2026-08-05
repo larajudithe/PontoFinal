@@ -6,13 +6,20 @@ using System.Collections;
 
 public class ObjectInterativo : MonoBehaviour
 {
-    [SerializeField] private Interativos interativo;
-    private bool isMoving = false;
-    public UnityEvent OnInteract;
-    public UnityEvent OnCollectObjeto;
-    [SerializeField] private InterativosAnteriores[] intAnteriores;
+    [Header("Interações")]
+    [SerializeField] private Interativos interativo; // Scriptable object do item
+    [SerializeField] private InterativosAnteriores[] intAnteriores; // Interações prévias
+
+    [Header("Eventos")]
+    public UnityEvent OnInteract; // Eveneto de interação
+    public UnityEvent OnCollectObjeto; // Evento de coleta do item
+
+    [Header("Movimentação")]
+    private bool isMoving = false; // Está se movendo
     [SerializeField] private float movimentationSpeed = 5;
     [SerializeField] private float movimentationTime = 1;
+
+    // Métodos para pegar o valor das variáveis
     public Interativos GetInterativo()
     {
         return interativo;
@@ -29,7 +36,7 @@ public class ObjectInterativo : MonoBehaviour
     {
         return intAnteriores[index];
     }
-    public IEnumerator MovingObject(Vector3 finalPosition)
+    public IEnumerator MovingObject(Vector3 finalPosition) // Movimentação do objeto
     {
         Debug.Log("Movendo objeto");
         isMoving = true;
@@ -45,11 +52,12 @@ public class ObjectInterativo : MonoBehaviour
     }
 }
 [System.Serializable]
-public class InterativosAnteriores
+public class InterativosAnteriores // Interação prévia de um objeto
 {
-    [SerializeField] Interativos itemRequirido;
-    [SerializeField] Interativos interativoAtual;
-    public UnityEvent OnInteractAtual;
+    [SerializeField] Interativos itemRequirido; // Item necessário para iniciar interação
+    [SerializeField] Interativos interativoAtual; // Interação do item
+    public UnityEvent OnInteractAtual; // Evento de interação do item
+    // Métodos para pegar as varáveis
     public Interativos GetItemRequirido()
     {
         return itemRequirido;
