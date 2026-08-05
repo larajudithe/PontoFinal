@@ -14,7 +14,6 @@ public class PlayerInventory : MonoBehaviour
             return;
         }
        Instance = this;
-       DontDestroyOnLoad(gameObject);
     }
     public void AddItem(Interativos item)
     {
