@@ -43,7 +43,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         if (isInteracting)
         {
-            if (currentInteraction.GetInterativo().pegavel && interactAction.IsPressed())
+            if (currentInteraction.GetInterativo().GetPegavel() && interactAction.IsPressed())
             {
                 RotateObject();
             }
@@ -90,7 +90,7 @@ public class PlayerInteractions : MonoBehaviour
         //ExtintorScript.FollowPlayer();
         if (currentInteraction.GetInterativo() != null)
         {
-            if (!currentInteraction.GetInterativo().carregavel)
+            if (!currentInteraction.GetInterativo().GetCarregavel())
             {
                 StopMovimentation.Invoke();
             }
@@ -111,7 +111,7 @@ public class PlayerInteractions : MonoBehaviour
                 return;
             }
             Interact(currentInteraction.GetInterativo());
-            if (currentInteraction.GetInterativo().pegavel)
+            if (currentInteraction.GetInterativo().GetPegavel())
             {
                 objOriginPosition = currentInteraction.transform.position;
                 objOriginRotate = currentInteraction.transform.rotation;
@@ -123,9 +123,9 @@ public class PlayerInteractions : MonoBehaviour
     {
         Debug.Log("interagindo");
         currentInterativo = interativo;
-        if (currentInterativo.image != null)
+        if (currentInterativo.GetImage() != null)
         {
-            UIManager.Instance.SetInterativoImage(currentInterativo.image, true);
+            UIManager.Instance.SetInterativoImage(currentInterativo.GetImage(), true);
         }
         Invoke("CanFinish", 1f);
     }
@@ -133,7 +133,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         Debug.Log("Pode finalizar interação");
         canFinish = true;
-        if (currentInterativo.image == null && !currentInterativo.pegavel)
+        if (currentInterativo.GetImage() == null && !currentInterativo.GetPegavel())
         {
             Debug.Log("Termino antecipado");
             FinishInteraction();
@@ -151,7 +151,7 @@ public class PlayerInteractions : MonoBehaviour
             PlayerInventory.Instance.AddItem(currentInterativo);
             currentInteraction.OnCollectObjeto.Invoke();
         }
-        if (currentInterativo.pegavel)
+        if (currentInterativo.GetPegavel())
         {
             currentInteraction.transform.rotation = objOriginRotate;
             StartCoroutine(currentInteraction.MovingObject(objOriginPosition));
