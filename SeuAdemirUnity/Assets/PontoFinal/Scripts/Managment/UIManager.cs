@@ -45,6 +45,6 @@ public class UIManager : MonoBehaviour
     }
     public void SetItens(Interativos interativo, int index)
     {
-        inventoryText[index].text = "-"+interativo.collectMessage;
+        inventoryText[index].text = "-"+interativo.GetCollectMessage();
     }
 }
