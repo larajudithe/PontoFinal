@@ -11,6 +11,8 @@ public class ObjectInterativo : MonoBehaviour
     public UnityEvent OnInteract;
     public UnityEvent OnCollectObjeto;
     [SerializeField] private InterativosAnteriores[] intAnteriores;
+    [SerializeField] private float movimentationSpeed = 5;
+    [SerializeField] private float movimentationTime = 1;
     public Interativos GetInterativo()
     {
         return interativo;
@@ -32,10 +34,10 @@ public class ObjectInterativo : MonoBehaviour
         Debug.Log("Movendo objeto");
         isMoving = true;
         float time = 0f;
-        while (time < 1f)
+        while (time < movimentationTime)
         {
             time += Time.deltaTime;
-            transform.position = Vector3.Lerp(transform.position, finalPosition, time * 5);
+            transform.position = Vector3.Lerp(transform.position, finalPosition, time * movimentationSpeed);
             yield return null;
         }
         transform.position = finalPosition;

@@ -6,14 +6,14 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Input Actions")]
     [SerializeField] private InputActionAsset inputActions; // InputMap
-    private InputAction actionMove; // A��o move (x e y 0,1)
-    private InputAction actionJump; // A��o Jump
+    private InputAction actionMove; // Ação move (x e y 0,1)
+    private InputAction actionJump; // Ação Jump
 
     [Header ("Movimento")]
     [SerializeField] private int playerSpeed; // Velocidade do jogador
     private Vector2 moveInput; // Movimento do jogador (-1, 0, 1
     private CharacterController characterController;
-    private Vector3 forwardDirection; // Movimento pra frente e pra tr�s
+    private Vector3 forwardDirection; // Movimento pra frente e pra trás
     private Vector3 strafeDirection; // Movimentos laterais
     private Vector3 verticalDirection; // Movimento pra cima e para baixo
     private Vector3 finalDirection; // Soma dos vetores de movimento
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake()
     {
-        // Define as a��es de input
+        // Define as ações de input
         actionMove = InputSystem.actions.FindAction("move");
         actionJump = InputSystem.actions.FindAction("jump");
     }
@@ -39,10 +39,10 @@ public class PlayerController : MonoBehaviour
     {
         characterController = GetComponent<CharacterController>();
         myCamera = Camera.main;
-        // Configura��o do cursor
+        // Configuração do cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        // Define gravidade e velocidade do pulo (Fun��o da posi��o e velocidade MRUV)
+        // Define gravidade e velocidade do pulo (Função da posição e velocidade MRUV)
         gravity = (-2 * jumpHeight) / Mathf.Pow(jumpTime, 2);
         jumpSpeed = (2 * jumpHeight) / jumpTime;
     }
@@ -50,15 +50,15 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        moveInput = actionMove.ReadValue<Vector2>(); // L� o input do jogador
-        // Rotaciona o jogador para o angulo da c�mera
+        moveInput = actionMove.ReadValue<Vector2>(); // Lê o input do jogador
+        // Rotaciona o jogador para o angulo da câmera
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, myCamera.transform.eulerAngles.y, transform.eulerAngles.z);
-        // Define a dire��o do movimento
+        // Define a direção do movimento
         forwardDirection = moveInput.y * playerSpeed * transform.forward;
         strafeDirection = moveInput.x * playerSpeed * transform.right;
-        if (characterController.isGrounded) // Verifica se o player est� no ch�o
+        if (characterController.isGrounded) // Verifica se o player esá no chão
         {
-            verticalDirection = Vector3.down; // Impede o player de ganhar velocidade enquanto est� parado
+            verticalDirection = Vector3.down; // Impede o player de ganhar velocidade enquanto está parado
         }else
         {
             verticalDirection += gravity * Time.deltaTime * Vector3.up; // Ganha velocidade em queda livre (gravidade)
