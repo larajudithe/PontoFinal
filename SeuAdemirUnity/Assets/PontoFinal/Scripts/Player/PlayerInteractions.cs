@@ -146,7 +146,7 @@ public class PlayerInteractions : MonoBehaviour
         isInteracting = false;
         UIManager.Instance.SetInterativoImage(null, false);
         //ExtintorScript.ExitPlayer();
-        if (currentInterativo.inventoryItem)
+        if (currentInterativo.GetInventoryItem())
         {
             PlayerInventory.Instance.AddItem(currentInterativo);
             currentInteraction.OnCollectObjeto.Invoke();

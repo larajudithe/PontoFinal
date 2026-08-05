@@ -10,8 +10,8 @@ public class Interativos : ScriptableObject
     [SerializeField] private Sprite image;
 
     [Header("Inventario")]
-    public bool inventoryItem;
-    public string collectMessage;
+    [SerializeField] private bool inventoryItem;
+    [SerializeField] private string collectMessage;
 
     public string GetTexto()
     {
