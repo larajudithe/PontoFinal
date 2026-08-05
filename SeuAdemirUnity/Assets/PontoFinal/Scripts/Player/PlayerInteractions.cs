@@ -8,6 +8,7 @@ public class PlayerInteractions : MonoBehaviour
 {
     [Header("Hay Cast")]
     [SerializeField] private float rayDistance = 2f; // Distância do raycast
+    [SerializeField] private Vector3 rayOrigin = new Vector3(0.5f, 0.5f, 0.3f);
     private Camera myCamera;
     private InputAction interactAction;
     private InputAction stopAction;
@@ -54,7 +55,7 @@ public class PlayerInteractions : MonoBehaviour
             return;
         }
         RaycastHit hit;
-        Vector3 originPoint = myCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.3f)); // Ponto de origem do raycast (centro da tela)
+        Vector3 originPoint = myCamera.ViewportToWorldPoint(rayOrigin); // Ponto de origem do raycast (centro da tela)
         if (Physics.Raycast(originPoint, myCamera.transform.forward, out hit, rayDistance)) // Se o raycast colidir com algum objeto
         {
             ObjectInterativo objectInterativo = hit.collider.GetComponent<ObjectInterativo>(); // Pega o script ObjectInterativo do objeto atingido
@@ -166,6 +167,4 @@ public class PlayerInteractions : MonoBehaviour
     }
 
     // Tirar numeros mágicos
-    // Trocar Moving par ao Objeto
-    // Tirar o publica do Interativos
 }
