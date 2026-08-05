@@ -87,7 +87,7 @@ public class PlayerInteractions : MonoBehaviour
         Debug.Log("Começou interação");
         currentInteraction = objeto;
         currentInteraction.OnInteract.Invoke();
-        ExtintorScript.FollowPlayer();
+        //ExtintorScript.FollowPlayer();
         if (currentInteraction.GetInterativo() != null)
         {
             if (!currentInteraction.GetInterativo().carregavel)
