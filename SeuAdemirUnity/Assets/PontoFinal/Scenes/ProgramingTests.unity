@@ -573,19 +573,7 @@ MonoBehaviour:
   interativo: {fileID: 11400000, guid: fa23ed67ab141ff4088f86e5e14eb854, type: 2}
   OnInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 794712966}
-        m_TargetAssemblyTypeName: SadBoy, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   OnCollectObjeto:
     m_PersistentCalls:
       m_Calls:

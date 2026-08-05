@@ -84,7 +84,7 @@ public class PlayerInteractions : MonoBehaviour
     }
     private void StartInteraction(ObjectInterativo objeto)
     {
-        Debug.Log("Começou interação");
+        //Debug.Log("Começou interação");
         currentInteraction = objeto;
         currentInteraction.OnInteract.Invoke();
         //ExtintorScript.FollowPlayer();
@@ -121,7 +121,7 @@ public class PlayerInteractions : MonoBehaviour
     }
     private void Interact(Interativos interativo)
     {
-        Debug.Log("interagindo");
+        //Debug.Log("interagindo");
         currentInterativo = interativo;
         if (currentInterativo.GetImage() != null)
         {
@@ -131,7 +131,7 @@ public class PlayerInteractions : MonoBehaviour
     }
     private void CanFinish()
     {
-        Debug.Log("Pode finalizar interação");
+        //Debug.Log("Pode finalizar interação");
         canFinish = true;
         if (currentInterativo.GetImage() == null && !currentInterativo.GetPegavel())
         {
@@ -141,7 +141,7 @@ public class PlayerInteractions : MonoBehaviour
     }
     private void FinishInteraction()
     {
-        Debug.Log("Finalizou interação");
+        //Debug.Log("Finalizou interação");
         canFinish = false;
         isInteracting = false;
         UIManager.Instance.SetInterativoImage(null, false);
