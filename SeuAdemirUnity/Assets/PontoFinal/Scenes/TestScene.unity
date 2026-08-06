@@ -413,6 +413,8 @@ GameObject:
   - component: {fileID: 326128786}
   - component: {fileID: 326128785}
   - component: {fileID: 326128784}
+  - component: {fileID: 326128788}
+  - component: {fileID: 326128787}
   m_Layer: 0
   m_Name: Janela-2
   m_TagString: Untagged
@@ -513,6 +515,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326128782}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &326128787
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326128782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &326128788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326128782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7009aae94755546b8c40b6de3f3339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Janela
+  animator: {fileID: 0}
+  objetoParaAtivar: {fileID: 0}
+  triggerName: Interagir
 --- !u!1 &403302346
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
   interativo: {fileID: 11400000, guid: c2ced96297c7c0e4a8a4072b5c2df9b0, type: 2}
+  intAnteriores: []
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -671,7 +711,6 @@ MonoBehaviour:
   OnCollectObjeto:
     m_PersistentCalls:
       m_Calls: []
-  intAnteriores: []
   movimentationSpeed: 5
   movimentationTime: 1
 --- !u!95 &403302352
@@ -1011,7 +1050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1132177501
 Transform:
   m_ObjectHideFlags: 0
@@ -1020,13 +1059,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1132177500}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.0000000018626449, z: 9.3132246e-10, w: 1}
-  m_LocalPosition: {x: 5.3, y: -6.55, z: 7.56}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.71325606, y: 0.70056695, z: 0.0069002854, w: 0.020596325}
+  m_LocalPosition: {x: -2.121, y: 0.047, z: 8.084}
+  m_LocalScale: {x: 0.01332469, y: 0.08435303, z: 0.1779901}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1667656475}
-  m_LocalEulerAnglesHint: {x: -20.711, y: -2.528, z: 2.445}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 1.13, y: 177.782, z: 91.007}
 --- !u!65 &1132177502
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1118,6 +1157,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
   interativo: {fileID: 11400000, guid: e387f36cdd039f14bbfc03d02b781cf5, type: 2}
+  intAnteriores:
+  - itemRequirido: {fileID: 0}
+    interativoAtual: {fileID: 0}
+    OnInteractAtual:
+      m_PersistentCalls:
+        m_Calls: []
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -1148,7 +1193,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  intAnteriores: []
   movimentationSpeed: 5
   movimentationTime: 1
 --- !u!4 &1172910788 stripped
@@ -1277,7 +1321,7 @@ Transform:
   m_GameObject: {fileID: 1457513280}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.722, y: -0.141, z: 7.144}
+  m_LocalPosition: {x: -2.573, y: 0.771, z: 7.144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1307,12 +1351,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1667656474}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.18013327, y: -0.01785822, z: 0.017017981, w: 0.9833328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.0241, y: 0.3725, z: 6.4092}
   m_LocalScale: {x: 0.013324687, y: 0.08435302, z: 0.17799}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1132177501}
   - {fileID: 1672289274}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1442,13 +1485,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
   interativo: {fileID: 11400000, guid: e387f36cdd039f14bbfc03d02b781cf5, type: 2}
+  intAnteriores: []
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
   OnCollectObjeto:
     m_PersistentCalls:
       m_Calls: []
-  intAnteriores: []
   movimentationSpeed: 5
   movimentationTime: 1
 --- !u!1 &1994310833
@@ -1688,6 +1731,7 @@ SceneRoots:
   - {fileID: 1016084391}
   - {fileID: 1994310835}
   - {fileID: 103712227}
+  - {fileID: 1132177501}
   - {fileID: 1126091085}
   - {fileID: 1667656475}
   - {fileID: 809895015}
