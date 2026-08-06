@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+//using System.Diagnostics;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -26,8 +28,17 @@ public class PlayerInventory : MonoBehaviour
         UIManager.Instance.SetItens(item, inventarioInts.Count); // Altera o texto do inventário para o nome do item (CollectMessage)
         inventarioInts.Add(item); // Adiciona o item na lista
     }
-    public bool CheckItem(Interativos item) // Verifica se um item existe na lista
+    public bool CheckItem(Interativos[] item) // Verifica se um item existe na lista
     {
-        return inventarioInts.Contains(item);
+        foreach (Interativos index in item)
+        {
+            Debug.Log("Verificando " + index);
+            if (!inventarioInts.Contains(index))
+            {
+                Debug.Log("Não contem " + index);
+                return false;
+            }
+        }
+        return true;
     }
 }

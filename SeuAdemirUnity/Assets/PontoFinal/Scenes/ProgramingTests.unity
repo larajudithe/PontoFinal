@@ -571,6 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
   interativo: {fileID: 11400000, guid: fa23ed67ab141ff4088f86e5e14eb854, type: 2}
+  intAnteriores: []
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -589,7 +590,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  intAnteriores: []
+  movimentationSpeed: 5
+  movimentationTime: 1
 --- !u!114 &794712972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -816,6 +818,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
   interativo: {fileID: 11400000, guid: 483a260081cfd614296c9545e90af4a7, type: 2}
+  intAnteriores:
+  - itemRequirido:
+    - {fileID: 11400000, guid: fa23ed67ab141ff4088f86e5e14eb854, type: 2}
+    - {fileID: 11400000, guid: fae59b8edfe0d094cb50f0c4e3d9f3e8, type: 2}
+    interativoAtual: {fileID: 11400000, guid: cf5dc540b82a36a4ea42f6a627c2350f, type: 2}
+    OnInteractAtual:
+      m_PersistentCalls:
+        m_Calls: []
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -834,12 +844,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  intAnteriores:
-  - itemRequirido: {fileID: 11400000, guid: fa23ed67ab141ff4088f86e5e14eb854, type: 2}
-    interativoAtual: {fileID: 11400000, guid: cf5dc540b82a36a4ea42f6a627c2350f, type: 2}
-    OnInteractAtual:
-      m_PersistentCalls:
-        m_Calls: []
+  movimentationSpeed: 5
+  movimentationTime: 1
 --- !u!1 &983718022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6026458604732980182, guid: ad55af03d0578b044adac4cc97be4bc5, type: 3}
@@ -1105,6 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
   interativo: {fileID: 11400000, guid: fae59b8edfe0d094cb50f0c4e3d9f3e8, type: 2}
+  intAnteriores: []
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -1123,7 +1130,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  intAnteriores: []
+  movimentationSpeed: 5
+  movimentationTime: 1
 --- !u!1 &1482066894
 GameObject:
   m_ObjectHideFlags: 0

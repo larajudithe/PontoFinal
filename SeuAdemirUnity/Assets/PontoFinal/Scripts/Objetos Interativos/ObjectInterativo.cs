@@ -54,11 +54,11 @@ public class ObjectInterativo : MonoBehaviour
 [System.Serializable]
 public class InterativosAnteriores // Interação prévia de um objeto
 {
-    [SerializeField] Interativos itemRequirido; // Item necessário para iniciar interação
-    [SerializeField] Interativos interativoAtual; // Interação do item
+    [SerializeField] private Interativos[] itemRequirido; // Item necessário para iniciar interação
+    [SerializeField] private Interativos interativoAtual; // Interação do item
     public UnityEvent OnInteractAtual; // Evento de interação do item
     // Métodos para pegar as varáveis
-    public Interativos GetItemRequirido()
+    public Interativos[] GetItemRequirido()
     {
         return itemRequirido;
     }
