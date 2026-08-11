@@ -15,7 +15,14 @@ MonoBehaviour:
   pegavel: 1
   carregavel: 0
   texto: 
-  audio: {fileID: 0}
+  audioEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   image: {fileID: 0}
+  stopInPuzzle: 1
   inventoryItem: 0
   collectMessage: 
