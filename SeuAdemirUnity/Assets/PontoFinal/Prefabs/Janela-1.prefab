@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3513198044280867161}
   - component: {fileID: 7705557322348119471}
   - component: {fileID: 2961949748566806113}
-  - component: {fileID: 8792692824005938267}
   m_Layer: 0
   m_Name: Janela-1
   m_TagString: Untagged
@@ -30,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8695153362816553677}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.96449, y: 0.509, z: 0.9256997}
   m_LocalScale: {x: 0.18429, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -134,18 +133,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2961949748566806113}
         m_TargetAssemblyTypeName: Janela, Assembly-CSharp
-        m_MethodName: Interagir
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2961949748566806113}
-        m_TargetAssemblyTypeName: Janela, Assembly-CSharp
         m_MethodName: AtivarOutroObjeto
         m_Mode: 1
         m_Arguments:
@@ -185,28 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7009aae94755546b8c40b6de3f3339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Janela
-  animator: {fileID: 8792692824005938267}
+  animator: {fileID: 0}
   objetoParaAtivar: {fileID: 0}
   triggerName: Interagir
---- !u!95 &8792692824005938267
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8695153362816553677}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a2708ccf00c7022489bc678f6d141437, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  NHEEEUU: 1
+  finalPosition: {x: -2.96449, y: 0.509, z: 1.29}
