@@ -6,6 +6,9 @@ public class Janela : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private GameObject objetoParaAtivar;
     [SerializeField] private string triggerName = "Interagir";
+    [SerializeField] private float NHEEEUU;
+    private bool jaFoiAtivado = false;
+    
 
     private void Awake()
     {
@@ -16,17 +19,31 @@ public class Janela : MonoBehaviour
     }
     public void Interagir()
     {
-        if (animator != null)
+        // if (animator != null)
+        // {
+        //     animator.SetTrigger(triggerName);
+
+        // }
+
+        if (!jaFoiAtivado)
         {
-            animator.SetTrigger(triggerName);
+            float time = 0;
+
+          while (time < 1)
+            {
+                transform.Translate(Vector3.forward * Time.deltaTime * NHEEEUU);
+                time += Time.deltaTime;
+            } 
         }
     }
 
     public void AtivarOutroObjeto()
     {
-        if (objetoParaAtivar != null)
+        if (objetoParaAtivar != null && !jaFoiAtivado)
         {
             objetoParaAtivar.SetActive(true);
+            jaFoiAtivado = true;
+           
         }
 
     }
