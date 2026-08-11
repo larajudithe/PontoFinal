@@ -142,9 +142,12 @@ public class PlayerInteractions : MonoBehaviour
         {
             UIManager.Instance.SetInterativoImage(currentInterativo.GetImage(), true);
         }
-        audioPlayer.PlayAudio(interativo.GetAudio());
+        if (interativo.GetAudioDuration() > 0)
+        {
+            audioPlayer.PlayAudio(interativo.GetAudio());
+        }
         UIManager.Instance.SetCaptions(interativo.GetTexto());
-        Invoke("CanFinish", interativo.GetAudio().length + 0.5f); // Depois de um segundo pode terminar a interação
+        Invoke("CanFinish", interativo.GetAudioDuration() + 0.5f); // Depois de um segundo pode terminar a interação
     }
     private void CanFinish()
     {
