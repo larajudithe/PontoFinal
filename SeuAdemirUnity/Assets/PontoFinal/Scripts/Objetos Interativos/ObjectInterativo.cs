@@ -38,7 +38,7 @@ public class ObjectInterativo : MonoBehaviour
     }
     public IEnumerator MovingObject(Vector3 finalPosition) // Movimentação do objeto
     {
-        Debug.Log("Movendo objeto");
+        //Debug.Log("Movendo objeto");
         isMoving = true;
         float time = 0f;
         while (time < movimentationTime)

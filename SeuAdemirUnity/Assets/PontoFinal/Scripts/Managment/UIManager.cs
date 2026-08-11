@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [Header("Images")]
     [SerializeField] private GameObject interactCursor; // Imagem que indíca que o personagem pode interagir
     [SerializeField] private Image InterativoImage; // Objetos com imagem na tela
+    [SerializeField] private TextMeshProUGUI captionsText;
     private void Awake()
     {
         openInventory = InputSystem.actions.FindAction("OpenInventory");
@@ -42,5 +43,9 @@ public class UIManager : MonoBehaviour
     public void SetItens(Interativos interativo, int index) // Define os textos dos itens do inventário
     {
         inventoryText[index].text = "-"+interativo.GetCollectMessage();
+    }
+    public void SetCaptions(string text)
+    {
+        captionsText.text = text;
     }
 }
