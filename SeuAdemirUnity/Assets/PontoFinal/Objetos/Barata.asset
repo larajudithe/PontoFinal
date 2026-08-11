@@ -23,5 +23,6 @@ MonoBehaviour:
       Data4: -1821886625
     Path: event:/Barata
   image: {fileID: 0}
+  stopInPuzzle: 0
   inventoryItem: 1
   collectMessage: Barata

@@ -151,14 +151,22 @@ public class PlayerInteractions : MonoBehaviour
     }
     private void CanFinish()
     {
-        //Debug.Log("Pode finalizar interação");
-        canFinish = true;
-        if (currentInterativo.GetImage() == null && !currentInterativo.GetPegavel()) // Caso o objeto não tenha imagem e nem seja seguravel, termina interação
+        if (!currentInterativo.GetStopInPuzzle())
         {
-            //Debug.Log("Termino antecipado");
-            FinishInteraction();
+            //Debug.Log("Pode finalizar interação");
+            canFinish = true;
+            if (currentInterativo.GetImage() == null && !currentInterativo.GetPegavel()) // Caso o objeto não tenha imagem e nem seja seguravel, termina interação
+            {
+                //Debug.Log("Termino antecipado");
+                FinishInteraction();
+            }
+            UIManager.Instance.SetCaptions("");
+        }else
+        {
+            UIManager.Instance.SetCaptions("");
+            Debug.Log("Puzzle");
+            return;
         }
-        UIManager.Instance.SetCaptions("");
     }
     private void FinishInteraction() // Termina a interação
     {

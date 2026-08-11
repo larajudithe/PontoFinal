@@ -11,6 +11,7 @@ public class Interativos : ScriptableObject
     [SerializeField] private string texto; // Descrição narrada
     [SerializeField] private EventReference audioEvent; // Audio
     [SerializeField] private Sprite image; // Imagem que é mostrada na tela
+    [SerializeField] private bool stopInPuzzle;
     private float audioDuration;
 
     [Header("Inventario")]
@@ -58,5 +59,9 @@ public class Interativos : ScriptableObject
             audioDuration = 0f;
         }
         return audioDuration;
+    }
+    public bool GetStopInPuzzle()
+    {
+        return stopInPuzzle;
     }
 }

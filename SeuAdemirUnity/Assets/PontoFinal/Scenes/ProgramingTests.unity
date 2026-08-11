@@ -1181,6 +1181,7 @@ GameObject:
   - component: {fileID: 1429293063}
   - component: {fileID: 1429293062}
   - component: {fileID: 1429293061}
+  - component: {fileID: 1429293066}
   m_Layer: 0
   m_Name: Painel
   m_TagString: Untagged
@@ -1208,6 +1209,18 @@ MonoBehaviour:
     OnInteractAtual:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1429293066}
+          m_TargetAssemblyTypeName: SadBoy, Assembly-CSharp
+          m_MethodName: GarotoTriste
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 585242628}
           m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
           m_MethodName: set_enabled
@@ -1347,6 +1360,18 @@ Transform:
   - {fileID: 1737063589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1429293066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429293060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9150af1d09d7e41a333e8bbb808da6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SadBoy
 --- !u!1 &1482066894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,13 +1748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
   interativo: {fileID: 11400000, guid: 794befa8a3947fb42a8f43173010b94b, type: 2}
-  intAnteriores:
-  - itemRequirido:
-    - {fileID: 11400000, guid: 794befa8a3947fb42a8f43173010b94b, type: 2}
-    interativoAtual: {fileID: 0}
-    OnInteractAtual:
-      m_PersistentCalls:
-        m_Calls: []
+  intAnteriores: []
   OnInteract:
     m_PersistentCalls:
       m_Calls: []

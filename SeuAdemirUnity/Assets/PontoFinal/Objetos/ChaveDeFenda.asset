@@ -23,5 +23,6 @@ MonoBehaviour:
       Data4: 0
     Path: 
   image: {fileID: 0}
+  stopInPuzzle: 0
   inventoryItem: 1
   collectMessage: Chave de fenda
