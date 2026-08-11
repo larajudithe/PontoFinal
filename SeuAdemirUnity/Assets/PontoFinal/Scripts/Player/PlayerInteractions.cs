@@ -33,9 +33,14 @@ public class PlayerInteractions : MonoBehaviour
     private bool canFinish = false; // Pode terminar a alteração
     private Camera myCamera; // Camera
     [SerializeField] public Extintor ExtintorScript;
+    [SerializeField] private AudioPlayer audioPlayer;
 
 
     private bool isInteracting = false;
+    private void Awake()
+    {
+        audioPlayer = GetComponent<AudioPlayer>();
+    }
     void Start()
     {
         myCamera = Camera.main;
@@ -137,7 +142,9 @@ public class PlayerInteractions : MonoBehaviour
         {
             UIManager.Instance.SetInterativoImage(currentInterativo.GetImage(), true);
         }
-        Invoke("CanFinish", 1f); // Depois de um segundo pode terminar a interação
+        audioPlayer.PlayAudio(interativo.GetAudio());
+        UIManager.Instance.SetCaptions(interativo.GetTexto());
+        Invoke("CanFinish", interativo.GetAudio().length + 0.5f); // Depois de um segundo pode terminar a interação
     }
     private void CanFinish()
     {
@@ -148,6 +155,7 @@ public class PlayerInteractions : MonoBehaviour
             //Debug.Log("Termino antecipado");
             FinishInteraction();
         }
+        UIManager.Instance.SetCaptions("");
     }
     private void FinishInteraction() // Termina a interação
     {
