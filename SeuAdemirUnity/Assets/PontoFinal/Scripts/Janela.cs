@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Janela : MonoBehaviour
@@ -7,8 +8,10 @@ public class Janela : MonoBehaviour
     [SerializeField] private GameObject objetoParaAtivar;
     [SerializeField] private string triggerName = "Interagir";
     [SerializeField] private float NHEEEUU;
+
+    [SerializeField] private Vector3 finalPosition;
     private bool jaFoiAtivado = false;
-    
+
 
     private void Awake()
     {
@@ -17,24 +20,19 @@ public class Janela : MonoBehaviour
             animator = GetComponent<Animator>();
         }
     }
-    public void Interagir()
+    public IEnumerator Interagir()
     {
-        // if (animator != null)
-        // {
-        //     animator.SetTrigger(triggerName);
+        finalPosition = new Vector3 (transform.position.x, transform.position.y, transform.position.z + 1);
+        float time = 0;
 
-        // }
-
-        if (!jaFoiAtivado)
+        while (time < 1)
         {
-            float time = 0;
-
-          while (time < 1)
-            {
-                transform.Translate(Vector3.forward * Time.deltaTime * NHEEEUU);
-                time += Time.deltaTime;
-            } 
+            time += Time.deltaTime;
+            transform.position = Vector3.Lerp(transform.position, finalPosition, time * NHEEEUU);
+            yield return null;
         }
+        transform.position = finalPosition;
+
     }
 
     public void AtivarOutroObjeto()
@@ -42,8 +40,9 @@ public class Janela : MonoBehaviour
         if (objetoParaAtivar != null && !jaFoiAtivado)
         {
             objetoParaAtivar.SetActive(true);
+            StartCoroutine(Interagir());
             jaFoiAtivado = true;
-           
+
         }
 
     }
