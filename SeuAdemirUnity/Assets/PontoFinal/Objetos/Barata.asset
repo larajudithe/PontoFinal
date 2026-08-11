@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54efcab01d09c924e8fd76564c6faab8, type: 3}
   m_Name: Barata
   m_EditorClassIdentifier: Assembly-CSharp::Interativos
-  texto: Que nojo uma barata
   pegavel: 1
-  audio: {fileID: 8300000, guid: fd5d37d699a8e414ea9a91e6d72069ac, type: 3}
+  carregavel: 0
+  texto: Que nojo uma barata
+  audioEvent:
+    Guid:
+      Data1: -967957458
+      Data2: 1253911478
+      Data3: -1144421984
+      Data4: -1821886625
+    Path: event:/Barata
   image: {fileID: 0}
   inventoryItem: 1
   collectMessage: Barata
