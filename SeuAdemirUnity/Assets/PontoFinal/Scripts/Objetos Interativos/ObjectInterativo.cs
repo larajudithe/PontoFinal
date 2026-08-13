@@ -60,10 +60,12 @@ public class InterativosAnteriores // Interação prévia de um objeto
     // Métodos para pegar as varáveis
     public Interativos[] GetItemRequirido()
     {
+        Debug.Log("Pedinfo ityem "+itemRequirido);
         return itemRequirido;
     }
     public Interativos GetInterativoAtual()
     {
+        Debug.Log("Funcinando item");
         return interativoAtual;
     }
 }
