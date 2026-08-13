@@ -158,8 +158,8 @@ MonoBehaviour:
   OnCollectObjeto:
     m_PersistentCalls:
       m_Calls: []
-  movimentationSpeed: 5
-  movimentationTime: 1
+  movimentationSpeed: 1
+  movimentationTime: 0.02
 --- !u!114 &2961949748566806113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,8 +172,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c7009aae94755546b8c40b6de3f3339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Janela
-  animator: {fileID: 0}
   objetoParaAtivar: {fileID: 0}
-  triggerName: Interagir
-  NHEEEUU: 1
-  finalPosition: {x: -2.96449, y: 0.509, z: 1.29}
+  NHEEEUU: 0.05
+  finalPosition: {x: -2.96449, y: 0.509, z: 1.4}
