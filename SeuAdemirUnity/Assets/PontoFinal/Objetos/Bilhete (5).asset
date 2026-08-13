@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54efcab01d09c924e8fd76564c6faab8, type: 3}
+  m_Name: Bilhete (5)
+  m_EditorClassIdentifier: Assembly-CSharp::Interativos
+  pegavel: 1
+  carregavel: 0
+  texto: Coletou BILHETE
+  audioEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  image: {fileID: 21300000, guid: 341cd83b11177e748b03bfc5f1001a43, type: 3}
+  stopInPuzzle: 0
+  inventoryItem: 1
+  collectMessage: bilhetinho hihii
