@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interativos
   pegavel: 0
   carregavel: 0
-  texto: 
+  texto: "N\xE3o preciso disso agora...."
   audioEvent:
     Guid:
       Data1: 0
