@@ -24,10 +24,18 @@ public class PuzzleManager : MonoBehaviour
     void Start()
     {
         // esconde o puzzle 
-        if (puzzleCanvasGroup != null)
+       if (puzzleCanvasGroup != null)
         {
             puzzleCanvasGroup.SetActive(false);
         }
+                
+
+        /*if(pontuacaoAtual += 8)
+        {
+            puzzleCanvasGroup.SetActive(false);
+
+        }
+        */
 
         //prepara as fases internas para quando o painel for aberto
         if (fase1Group != null) fase1Group.SetActive(true);
