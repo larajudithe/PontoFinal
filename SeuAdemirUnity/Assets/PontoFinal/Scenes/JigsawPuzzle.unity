@@ -224,6 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 28044686}
   objectDragToPos: {fileID: 0}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
 --- !u!114 &28044689
 MonoBehaviour:
@@ -441,6 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 380895883}
   objectDragToPos: {fileID: 0}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
 --- !u!114 &380895886
 MonoBehaviour:
@@ -782,12 +784,12 @@ Transform:
   m_GameObject: {fileID: 678295085}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 581.35895, y: 350.47888, z: -136.47614}
+  m_LocalPosition: {x: 30.858948, y: 97.47888, z: -136.47614}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1157343724}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 973254232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748599959
 GameObject:
@@ -925,6 +927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 748599960}
   objectDragToPos: {fileID: 2126272350}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
 --- !u!1 &853541908
 GameObject:
@@ -1062,6 +1065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 853541909}
   objectDragToPos: {fileID: 1029794921}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
 --- !u!1 &919183852
 GameObject:
@@ -1302,7 +1306,110 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 945590279}
   objectDragToPos: {fileID: 1600852931}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
+--- !u!1 &973254228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973254232}
+  - component: {fileID: 973254231}
+  - component: {fileID: 973254230}
+  - component: {fileID: 973254229}
+  m_Layer: 5
+  m_Name: Canvas2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &973254229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973254228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &973254230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973254228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &973254231
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973254228}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &973254232
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973254228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 678295086}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1029794920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 1185982441}
   objectDragToPos: {fileID: 0}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
 --- !u!114 &1185982444
 MonoBehaviour:
@@ -1698,6 +1806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 1230832998}
   objectDragToPos: {fileID: 281953502}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
 --- !u!114 &1230833001
 MonoBehaviour:
@@ -2069,7 +2178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1678387438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2082,39 +2191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575f7760717fbd743997297019778335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
-  puzzleCanvasGroup: {fileID: 919183852}
-  fase1Group: {fileID: 101374935}
-  fase2Group: {fileID: 678295085}
-  OnFase1Concluida:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280191076}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnPuzzleFinalizado:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1280191076}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  pontosTotais: 0
+  canvasAtual: {fileID: 919183852}
+  proximoQuebraCabeca: {fileID: 678295085}
+  canvasPrincipal: {fileID: 973254228}
 --- !u!4 &1678387439
 Transform:
   m_ObjectHideFlags: 0
@@ -2234,6 +2314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 2024120849}
   objectDragToPos: {fileID: 0}
+  puzzleManager: {fileID: 0}
   dropDistance: 30
 --- !u!1 &2126272349
 GameObject:
@@ -2318,5 +2399,5 @@ SceneRoots:
   - {fileID: 509202272}
   - {fileID: 919183856}
   - {fileID: 1419498927}
-  - {fileID: 678295086}
   - {fileID: 1678387439}
+  - {fileID: 973254232}

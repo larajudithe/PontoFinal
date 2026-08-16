@@ -1,102 +1,50 @@
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [Header("Painel Principal do Puzzle")]
-    //[Tooltip("Arraste aqui o GameObject raiz do Canvas/Painel do quebra-cabeça")]
-    [SerializeField] private GameObject puzzleCanvasGroup;
+    [Header("Configurações")]
+    [SerializeField] private int pontosTotais = 0;
+    
+    [Header("Telas / Canvases")]
+    [SerializeField] private GameObject canvasAtual; // o canvas ou painel do jogo atual
+    [SerializeField] private GameObject proximoQuebraCabeca; // objeto/Painel do proximo quebra-cabeca
+    [SerializeField] private GameObject canvasPrincipal; // o Canvas geral que vai fechar ao chegar em 8
 
-    [Header("Fases do Quebra-Cabeça")]
-    //Grupo que contém as peças e slots da FASE 1 (Primeira foto)")]
-    [SerializeField] private GameObject fase1Group;
-
-    //Grupo que contém as peças e slots da FASE 2 (Segunda foto)")]
-    [SerializeField] private GameObject fase2Group;
-
-    [Header("Eventos de Conclusão")]
-    [SerializeField] private UnityEvent OnFase1Concluida;
-    [SerializeField] private UnityEvent OnPuzzleFinalizado;
-
-    private int pontuacaoAtual = 0;
-    private bool fotoItemColetado = false;
-
-    void Start()
+    public void AdicionarPonto()
     {
-        // esconde o puzzle 
-       if (puzzleCanvasGroup != null)
+        pontosTotais++;
+        Debug.Log("Pontos atuais: " + pontosTotais);
+
+        // quando fizer 4 pontos, muda para o proximo quebra-cabeca
+        if (pontosTotais == 4)
         {
-            puzzleCanvasGroup.SetActive(false);
+            MudarParaProximoQuebraCabeca();
         }
-                
-
-        /*if(pontuacaoAtual += 8)
+        // quando fizer 8 pontos, fecha o canvas/jogo
+        else if (pontosTotais >= 8)
         {
-            puzzleCanvasGroup.SetActive(false);
-
-        }
-        */
-
-        //prepara as fases internas para quando o painel for aberto
-        if (fase1Group != null) fase1Group.SetActive(true);
-        if (fase2Group != null) fase2Group.SetActive(false);
-
-        // grante o estado inicial correto
-        if (fase1Group != null) fase1Group.SetActive(true);
-        if (fase2Group != null) fase2Group.SetActive(false);
-        {
-            pontuacaoAtual++;
-            Debug.Log("Pontuação do Puzzle: " + pontuacaoAtual);
-
-            ChecarProgresso();
+            FecharCanvas();
         }
     }
 
-    private void ChecarProgresso()
+    private void MudarParaProximoQuebraCabeca()
     {
-        if (pontuacaoAtual == 4)
+        Debug.Log("Mudando para o próximo quebra-cabeca!");
+        
+        if (canvasAtual != null)
+            canvasAtual.SetActive(false); // desativa o primeiro quebra-cabeca
+
+        if (proximoQuebraCabeca != null)
+            proximoQuebraCabeca.SetActive(true); // ativa o segundo quebra-cabeca
+    }
+
+    private void FecharCanvas()
+    {
+        Debug.Log("Fechando o Canvas!");
+
+        if (canvasPrincipal != null)
         {
-            ConcluirFase1();
+            canvasPrincipal.SetActive(false); // desativa o Canvas inteiro
         }
-        else if (pontuacaoAtual >= 8)
-        {
-            ConcluirPuzzleGlobal();
-        }
-
     }
-
-    private void ConcluirFase1()
-    {
-        //     Debug.Log("FOI FINALMENTE PRA FASE 2  ");
-
-        // desativa os slots e peças antigos e ativa o novo grupo de slots e peças
-        if (fase1Group != null) fase1Group.SetActive(false);
-        if (fase2Group != null) fase2Group.SetActive(true);
-
-        OnFase1Concluida?.Invoke();
-    }
-
-    private void ConcluirPuzzleGlobal()
-    {
-        Debug.Log("Quebra-cabeça concluído com 8 pontos!");
-
-        OnPuzzleFinalizado?.Invoke();
-
-        // - para dajr da twla od canvas      
-        /*
-             if (puzzleCanvasGroup != null)
-             {
-                 puzzleCanvasGroup.SetActive(false);
-             }
-             */
-    }
-
-    //  {
-    /*
-    if (puzzleCanvasGroup != null)
-    {
-        puzzleCanvasGroup.SetActive(false);
-    }
-    */
-    // }
 }
