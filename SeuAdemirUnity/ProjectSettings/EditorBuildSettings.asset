@@ -9,11 +9,11 @@ EditorBuildSettings:
     path: Assets/PontoFinal/Scenes/Menu.unity
     guid: bb31c248dbaad32438dac5ae2cf565fd
   - enabled: 1
-    path: Assets/PontoFinal/Scenes/TestScene.unity
-    guid: 243b70659bb5e1946b07034bd93183e8
+    path: Assets/PontoFinal/Scenes/Cinematic.unity
+    guid: 769a560771390ab4ab5cbac206043a29
   - enabled: 1
-    path: Assets/PontoFinal/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/PontoFinal/Scenes/gameplay.unity
+    guid: 6a135c502f8169d409599d2543fe6b3e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
