@@ -15,6 +15,7 @@ public class PlayerInteractions : MonoBehaviour
     private InputAction interactAction; // Interação (Botão esquerdo do mouse)
     private InputAction stopAction; // Parar interação (Botão direito do mouse)
     private InputAction mouseLook; // Movimentação do mouse
+    private InputAction Extintor; // Atirar com o extintor
 
     [Header("Eventos")]
     public UnityEvent StartMovimentation; // Voltar a mover o player
@@ -47,6 +48,7 @@ public class PlayerInteractions : MonoBehaviour
         interactAction = InputSystem.actions.FindAction("RotateInteract");
         stopAction = InputSystem.actions.FindAction("StopInteract");
         mouseLook = InputSystem.actions.FindAction("look");
+        Extintor = InputSystem.actions.FindAction("Extintor");
     }
 
     // Update is called once per frame
