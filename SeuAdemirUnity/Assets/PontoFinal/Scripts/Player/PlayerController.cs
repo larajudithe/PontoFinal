@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputActionAsset inputActions; // InputMap
     private InputAction actionMove; // Ação move (x e y 0,1)
     private InputAction actionJump; // Ação Jump
+    private InputAction actionExtintor; // Atira com o extintor
 
     [Header ("Movimento")]
     [SerializeField] private int playerSpeed; // Velocidade do jogador
@@ -26,12 +27,14 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera")]
     private Camera myCamera;
+    public GameObject Extintor;
 
     void Awake()
     {
         // Define as ações de input
         actionMove = InputSystem.actions.FindAction("move");
         actionJump = InputSystem.actions.FindAction("jump");
+        actionExtintor = InputSystem.actions.FindAction("Extintor");
     }
 
 
@@ -66,6 +69,14 @@ public class PlayerController : MonoBehaviour
         if (actionJump.WasPressedThisFrame() && characterController.isGrounded) // Pulo
         {
             verticalDirection = jumpSpeed * Vector3.up;
+        }
+         if (actionExtintor.IsPressed()) // Atirar
+        {
+            Extintor.SetActive(true); 
+
+        }else
+        {
+            Extintor.SetActive(false); 
         }
         if (verticalDirection.y > 0 && (characterController.collisionFlags & CollisionFlags.Above) != 0) // Zero a velocidade quando player bate no teto
         {

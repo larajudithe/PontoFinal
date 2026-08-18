@@ -8,6 +8,7 @@ public class SmashButton : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private int acressValue;
     [SerializeField] private float timeIntervalo;
+    [SerializeField] private Transform chapaTransform;
     public UnityEvent OnPuzzleCompleted;
 
     private float timer;
@@ -39,5 +40,6 @@ public class SmashButton : MonoBehaviour
             Debug.Log("Puzzle completed!");
             OnPuzzleCompleted.Invoke();
         }
+        chapaTransform.rotation = Quaternion.Euler(-slider.value/25, chapaTransform.rotation.y, chapaTransform.rotation.z);
     }
 }
