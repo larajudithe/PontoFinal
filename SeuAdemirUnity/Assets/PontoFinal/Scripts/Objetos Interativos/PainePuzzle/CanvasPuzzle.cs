@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CanvasPuzzle : MonoBehaviour
 {
     private int unscreleds = 0;
     [SerializeField] private GameObject[] parafusos;
     [SerializeField] private GameObject smashUI;
-    [SerializeField] private Animator ChapaAnimator;
-    [SerializeField] private GameObject Fios;
+    [SerializeField] private GameObject chapa;
+    [SerializeField] private Button Fios;
     void Start()
     {
         
@@ -30,11 +31,11 @@ public class CanvasPuzzle : MonoBehaviour
     public void InsidePainel()
     {
         smashUI.SetActive(false);
-        ChapaAnimator.SetBool("Open", true);
+        chapa.SetActive(false);
         foreach (GameObject parafuso in parafusos)
         {
             parafuso.SetActive(false);
         }
-        Fios.SetActive(true);
+        Fios.enabled = true;
     }
 }
