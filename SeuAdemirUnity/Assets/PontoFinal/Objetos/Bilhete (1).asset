@@ -25,4 +25,4 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 34a6c3e24ceb2d349ac073afda779cae, type: 3}
   stopInPuzzle: 0
   inventoryItem: 1
-  collectMessage: Bilhete 1
+  collectMessage: "Bilhete (VOC\xCA)"

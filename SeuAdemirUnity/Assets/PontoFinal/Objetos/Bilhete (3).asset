@@ -25,4 +25,4 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 19557627c4712564d96cc0635a1759b0, type: 3}
   stopInPuzzle: 0
   inventoryItem: 1
-  collectMessage: Bilhetes 3
+  collectMessage: Bilhetes (DE)
