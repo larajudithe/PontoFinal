@@ -19,4 +19,9 @@ public class PainelPuzzle : MonoBehaviour
         playerUI.SetActive(false);
         puzzleUI.SetActive(true);
     }
+    public void EndPuzzle()
+    {
+        puzzleUI.SetActive(false);
+        playerUI.SetActive(true);
+    }
 }

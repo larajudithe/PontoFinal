@@ -172,9 +172,11 @@ public class PlayerInteractions : MonoBehaviour
             return;
         }
     }
-    private void FinishInteraction() // Termina a interação
+    public void FinishInteraction() // Termina a interação
     {
         //Debug.Log("Finalizou interação");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         canFinish = false;
         isInteracting = false;
         UIManager.Instance.SetInterativoImage(null, false); // Desabilita a imagem do canvas
