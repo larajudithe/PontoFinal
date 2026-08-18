@@ -1,5 +1,7 @@
 using UnityEngine;
 using FMODUnity;
+using UnityEditor.Events;
+using UnityEngine.Events;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -20,6 +22,8 @@ public class PuzzleManager : MonoBehaviour
 
     [SerializeField] private EventReference somEncaixadp;
 
+    public UnityEvent parardeGirar;
+
 
     public void AdicionarPonto()
     {
@@ -36,6 +40,8 @@ public class PuzzleManager : MonoBehaviour
         else if (pontosTotais >= 7)
         {
             FecharCanvas();
+            parardeGirar.Invoke();
+
         }
     }
 
@@ -75,6 +81,7 @@ public class PuzzleManager : MonoBehaviour
     {
     Instantiate(prefabFicha, pontoDeSpawn.position, pontoDeSpawn.rotation);
      }
+     
 
     }
     
