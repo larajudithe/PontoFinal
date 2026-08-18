@@ -40,7 +40,6 @@ public class SmashButton : MonoBehaviour
             Debug.Log("Puzzle completed!");
             OnPuzzleCompleted.Invoke();
         }
-        chapaTransform.rotation = Quaternion.Euler(-slider.value/100, chapaTransform.rotation.y, chapaTransform.rotation.z);
-        Debug.Log(-slider.value/100);
+        chapaTransform.rotation = Quaternion.Euler(-slider.value/25, chapaTransform.rotation.y, chapaTransform.rotation.z);
     }
 }
