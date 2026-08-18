@@ -1,27 +1,39 @@
 using UnityEngine;
+using FMODUnity;
 
 public class PuzzleManager : MonoBehaviour
 {
-    [Header("Configurações")]
+    [Header("Configuracoes")]
     [SerializeField] private int pontosTotais = 0;
     
     [Header("Telas / Canvases")]
-    [SerializeField] private GameObject canvasAtual; // o canvas ou painel do jogo atual
-    [SerializeField] private GameObject proximoQuebraCabeca; // objeto/Painel do proximo quebra-cabeca
-    [SerializeField] private GameObject canvasPrincipal; // o Canvas geral que vai fechar ao chegar em 8
+    [SerializeField] private GameObject canvasAtual; 
+    [SerializeField] private GameObject proximoQuebraCabeca; 
+    [SerializeField] private GameObject canvasPrincipal; 
+
+    [Header("Referencia de Interacao")]
+    [SerializeField] private ObjectInterativo objetoInterativo;
+
+    [Header("Recompensa :O")]
+    [SerializeField] private GameObject prefabFicha; 
+    [SerializeField] private Transform pontoDeSpawn;  
+
+    [SerializeField] private EventReference somEncaixadp;
+
 
     public void AdicionarPonto()
     {
         pontosTotais++;
-        Debug.Log("Pontos atuais: " + pontosTotais);
+        RuntimeManager.PlayOneShot(somEncaixadp);
+       // Debug.Log("Pontos atuais: " + pontosTotais);
 
         // quando fizer 4 pontos, muda para o proximo quebra-cabeca
         if (pontosTotais == 4)
         {
             MudarParaProximoQuebraCabeca();
         }
-        // quando fizer 8 pontos, fecha o canvas/jogo
-        else if (pontosTotais >= 8)
+        // quando fizer 7 pontos, fecha o canvas/jogo
+        else if (pontosTotais >= 7)
         {
             FecharCanvas();
         }
@@ -29,7 +41,7 @@ public class PuzzleManager : MonoBehaviour
 
     private void MudarParaProximoQuebraCabeca()
     {
-        Debug.Log("Mudando para o próximo quebra-cabeca!");
+       // Debug.Log("Mudando para o próximo quebra-cabeca!");
         
         if (canvasAtual != null)
             canvasAtual.SetActive(false); // desativa o primeiro quebra-cabeca
@@ -40,11 +52,30 @@ public class PuzzleManager : MonoBehaviour
 
     private void FecharCanvas()
     {
-        Debug.Log("Fechando o Canvas!");
+        //Debug.Log("Fechando o Canvas!");
 
         if (canvasPrincipal != null)
         {
             canvasPrincipal.SetActive(false); // desativa o Canvas inteiro
         }
+     /*   if (canvasPrincipalDoJogo != null)
+        {
+        canvasPrincipalDoJogo.SetActive(true);
+
+        playerMovimento.enabled = true;
     }
+    */
+
+    if (objetoInterativo != null)
+    {
+        objetoInterativo.OnCollectObjeto.Invoke();
+    }
+
+    if (prefabFicha != null && pontoDeSpawn != null)
+    {
+    Instantiate(prefabFicha, pontoDeSpawn.position, pontoDeSpawn.rotation);
+     }
+
+    }
+    
 }
