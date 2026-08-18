@@ -167,6 +167,8 @@ public class PlayerInteractions : MonoBehaviour
         {
             UIManager.Instance.SetCaptions("");
             Debug.Log("Puzzle");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             return;
         }
     }

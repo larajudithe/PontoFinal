@@ -25,6 +25,7 @@ public class PlayerInventory : MonoBehaviour
             Debug.Log("Item já está no invetário");
             return;
         }
+        Debug.Log("Iten aducuibadi");
         UIManager.Instance.SetItens(item, inventarioInts.Count); // Altera o texto do inventário para o nome do item (CollectMessage)
         inventarioInts.Add(item); // Adiciona o item na lista
     }
