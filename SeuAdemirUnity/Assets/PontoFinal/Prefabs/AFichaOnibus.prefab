@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.7828135
       objectReference: {fileID: 0}
@@ -48,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -6722085885383957590, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
       propertyPath: m_Intensity
       value: 150
@@ -65,7 +81,13 @@ PrefabInstance:
       value: AFichaOnibus
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -168051006817133204, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+    - {fileID: 2654713335656134247, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+    - {fileID: -8700617353114198275, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+    - {fileID: -3824974996824756987, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+    - {fileID: -2572967989333021709, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
+    - {fileID: 65702495048144492, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: -1018664272722485354, guid: a4fbf251e7eae5243a4342161bbf5600, type: 3}
