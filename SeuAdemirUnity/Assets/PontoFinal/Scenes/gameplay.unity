@@ -2965,7 +2965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cd6924fdc292c4d9c22b6641051053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
-  interativo: {fileID: 0}
+  interativo: {fileID: 11400000, guid: 6d52ee664f10a0845bb61eae3f0e99b1, type: 2}
   intAnteriores: []
   OnInteract:
     m_PersistentCalls:
@@ -3051,6 +3051,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1457539190}
+        m_TargetAssemblyTypeName: ControleCursor, Assembly-CSharp
+        m_MethodName: BloquearMouse
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3160,8 +3172,8 @@ Transform:
   m_GameObject: {fileID: 608376314}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.99, y: 1.81, z: -6.84}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -12.214, y: 2.46, z: 2.736}
+  m_LocalScale: {x: 0.1, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3444,7 +3456,7 @@ Transform:
   m_GameObject: {fileID: 679851010}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.37, y: 0.76, z: -5.514}
+  m_LocalPosition: {x: -11.555, y: 1.654, z: 2.043}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3570,6 +3582,17 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   playerCanvas: {fileID: 1805520592}
   pauseCanvas: {fileID: 2057053726}
+--- !u!114 &727251300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5259990199197609123, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+  m_PrefabInstance: {fileID: 1182005620}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727251287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1b6eed78b936d409cf9c54ef2a2044, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractions
 --- !u!1001 &751876904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7227,7 +7250,7 @@ MonoBehaviour:
   proximoQuebraCabeca: {fileID: 659203996}
   canvasPrincipal: {fileID: 1187592498}
   objetoInterativo: {fileID: 608376315}
-  prefabFicha: {fileID: 4855166263475467398, guid: 2141b913074ca1b459513a41146c730c, type: 3}
+  prefabFicha: {fileID: 7806177402455936437, guid: 401400c470e16a04784373e6b4a80a46, type: 3}
   pontoDeSpawn: {fileID: 679851011}
   somEncaixadp:
     Guid:
@@ -7236,6 +7259,21 @@ MonoBehaviour:
       Data3: 1727665554
       Data4: -544767809
     Path: event:/Encaixe
+  parardeGirar:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 727251300}
+        m_TargetAssemblyTypeName: PlayerInteractions, Assembly-CSharp
+        m_MethodName: FinishInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1463668747
 GameObject:
   m_ObjectHideFlags: 0
