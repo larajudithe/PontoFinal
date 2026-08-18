@@ -7250,7 +7250,7 @@ MonoBehaviour:
   proximoQuebraCabeca: {fileID: 659203996}
   canvasPrincipal: {fileID: 1187592498}
   objetoInterativo: {fileID: 608376315}
-  prefabFicha: {fileID: 7806177402455936437, guid: 401400c470e16a04784373e6b4a80a46, type: 3}
+  prefabFicha: {fileID: 6399606348869975752, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
   pontoDeSpawn: {fileID: 679851011}
   somEncaixadp:
     Guid:
