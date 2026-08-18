@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54efcab01d09c924e8fd76564c6faab8, type: 3}
+  m_Name: CatracaFechada
+  m_EditorClassIdentifier: Assembly-CSharp::Interativos
+  pegavel: 0
+  carregavel: 0
+  texto: Preciso de uma ficha para passar a catraca
+  audioEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  image: {fileID: 0}
+  stopInPuzzle: 0
+  inventoryItem: 0
+  collectMessage: 

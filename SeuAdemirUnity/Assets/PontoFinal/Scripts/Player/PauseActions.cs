@@ -23,6 +23,8 @@ public class PauseActions : MonoBehaviour
             inputActions.FindActionMap("UI").Enable();
             playerCanvas.SetActive(false);
             pauseCanvas.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         else if (pauseMenu.WasPressedThisFrame())
         {
@@ -30,6 +32,8 @@ public class PauseActions : MonoBehaviour
             inputActions.FindActionMap("Player").Enable();
             pauseCanvas.SetActive(false);
             playerCanvas.SetActive(true);
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }
