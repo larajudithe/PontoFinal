@@ -15,7 +15,6 @@ public class PlayerInteractions : MonoBehaviour
     private InputAction interactAction; // Interação (Botão esquerdo do mouse)
     private InputAction stopAction; // Parar interação (Botão direito do mouse)
     private InputAction mouseLook; // Movimentação do mouse
-    private InputAction Extintor; // Atirar com o extintor
 
     [Header("Eventos")]
     public UnityEvent StartMovimentation; // Voltar a mover o player
@@ -48,7 +47,6 @@ public class PlayerInteractions : MonoBehaviour
         interactAction = InputSystem.actions.FindAction("RotateInteract");
         stopAction = InputSystem.actions.FindAction("StopInteract");
         mouseLook = InputSystem.actions.FindAction("look");
-        Extintor = InputSystem.actions.FindAction("Extintor");
     }
 
     // Update is called once per frame
@@ -104,7 +102,7 @@ public class PlayerInteractions : MonoBehaviour
         //Debug.Log("Começou interação");
         currentInteraction = objeto;
         currentInteraction.OnInteract.Invoke(); // Chama o evento de interação com o objeto
-        //ExtintorScript.FollowPlayer();
+        // ExtintorScript.FollowPlayer();
         if (currentInteraction.GetInterativo() != null) // Verifica se o objeto tem um scriptable object
         {
             if (!currentInteraction.GetInterativo().GetCarregavel())
@@ -180,7 +178,7 @@ public class PlayerInteractions : MonoBehaviour
         canFinish = false;
         isInteracting = false;
         UIManager.Instance.SetInterativoImage(null, false); // Desabilita a imagem do canvas
-        //ExtintorScript.ExitPlayer();
+        // ExtintorScript.ExitPlayer();
         if (currentInterativo.GetInventoryItem()) // Coleta o item para o invenrário
         {
             PlayerInventory.Instance.AddItem(currentInterativo);
