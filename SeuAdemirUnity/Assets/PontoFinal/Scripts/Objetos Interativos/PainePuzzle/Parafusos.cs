@@ -21,9 +21,10 @@ public class Parafusos : MonoBehaviour
         if (unscrewing < 3)
         {
             unscrewing++;
-        }else
-        {
-            OnDesparafusado.Invoke();
+            if (unscrewing >= 3)
+            {
+                OnDesparafusado.Invoke();
+            }
         }
     }
 }
