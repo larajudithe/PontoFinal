@@ -70,13 +70,16 @@ public class PlayerController : MonoBehaviour
         {
             verticalDirection = jumpSpeed * Vector3.up;
         }
-         if (actionExtintor.IsPressed()) // Atirar
+        if (Extintor != null)
         {
-            Extintor.SetActive(true); 
+            if (actionExtintor.IsPressed()) // Atirar
+            {
+                Extintor.SetActive(true); 
 
-        }else
-        {
-            Extintor.SetActive(false); 
+            }else
+            {
+                Extintor.SetActive(false); 
+            }
         }
         if (verticalDirection.y > 0 && (characterController.collisionFlags & CollisionFlags.Above) != 0) // Zero a velocidade quando player bate no teto
         {
