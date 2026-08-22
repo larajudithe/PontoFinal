@@ -27,7 +27,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Camera")]
     private Camera myCamera;
-    public GameObject Extintor;
+
+    public GameObject TiroObject;
+    public Transform Extintor;
+    GameObject clone;
+
+    int vida = 5;
 
     void Awake()
     {
@@ -35,6 +40,18 @@ public class PlayerController : MonoBehaviour
         actionMove = InputSystem.actions.FindAction("move");
         actionJump = InputSystem.actions.FindAction("jump");
         actionExtintor = InputSystem.actions.FindAction("Extintor");
+    }
+    private void OnEnable()
+    {
+        // Triggers once when the hold duration threshold is met
+        actionExtintor.performed += OnHoldPerformed;
+        // Triggers when the player finally lets go of the button
+        actionExtintor.canceled += OnHoldCanceled;
+    }
+     private void OnDisable()
+    {
+        actionExtintor.performed -= OnHoldPerformed;
+        actionExtintor.canceled -= OnHoldCanceled;
     }
 
 
@@ -70,17 +87,6 @@ public class PlayerController : MonoBehaviour
         {
             verticalDirection = jumpSpeed * Vector3.up;
         }
-        if (Extintor != null)
-        {
-            if (actionExtintor.IsPressed()) // Atirar
-            {
-                Extintor.SetActive(true); 
-
-            }else
-            {
-                Extintor.SetActive(false); 
-            }
-        }
         if (verticalDirection.y > 0 && (characterController.collisionFlags & CollisionFlags.Above) != 0) // Zero a velocidade quando player bate no teto
         {
             verticalDirection = Vector3.zero;
@@ -88,5 +94,20 @@ public class PlayerController : MonoBehaviour
 
         finalDirection = forwardDirection + strafeDirection + verticalDirection; // Soma os movimentos
         characterController.Move(finalDirection * Time.deltaTime); // Move o personagem
+    }
+    public void PerderVida()
+    {
+        vida -=1;
+        Debug.Log(vida);
+    }
+
+     private void OnHoldPerformed(InputAction.CallbackContext context)
+    {
+       clone = Instantiate(TiroObject, Extintor.position, TiroObject.transform.rotation);
+    }
+
+    private void OnHoldCanceled(InputAction.CallbackContext context)
+    {
+        Destroy(clone);
     }
 }

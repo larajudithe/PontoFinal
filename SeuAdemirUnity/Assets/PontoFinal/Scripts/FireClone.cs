@@ -3,14 +3,21 @@ using System.Collections;
 
 public class FireClone : MonoBehaviour
 {
-    float posicaoz = 2.04f;
+    int posicaoz = 1;
     public GameObject originalObject;
-    private Vector3 spawnPosition;
+    public Transform Fire;
+    public Transform Fire2;
+    Vector3 offset;
+    [SerializeField] PlayerController PlayerControllerScript;
+    GameObject clone;
+    GameObject clone2;
+    int fogo = 5;
 
     void Start()
     {
         // Clones the object at a specific position with its default rotation
         StartCoroutine(ClonarFogo());
+        offset = new Vector3(0f, 0f, posicaoz);
     }
     void Update()
     {
@@ -18,10 +25,27 @@ public class FireClone : MonoBehaviour
     }
     IEnumerator ClonarFogo()
     {
-        posicaoz += 1f;
-        yield return new WaitForSeconds(5f);
-        GameObject clone = Instantiate(originalObject, spawnPosition = new Vector3(-9.621f, 1.545f, posicaoz), originalObject.transform.rotation);
-        GameObject clone2 = Instantiate(originalObject, spawnPosition = new Vector3(-11.634f, 1.545f, posicaoz), originalObject.transform.rotation);
+        posicaoz += 1;
+        yield return new WaitForSeconds(10f);
+        clone = Instantiate(originalObject, Fire.position - offset, originalObject.transform.rotation);
+        clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
         Debug.Log(posicaoz);
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+         if (other.CompareTag("Player"))
+        {
+            PlayerControllerScript.PerderVida();
+        }
+    }
+    public void PerderFogo()
+    {
+        fogo -= 1;
+        if(fogo == 0)
+        {
+        Destroy(clone);
+        Destroy(clone2);
+        }
+        Debug.Log("fogo: " + fogo);
     }
 }
