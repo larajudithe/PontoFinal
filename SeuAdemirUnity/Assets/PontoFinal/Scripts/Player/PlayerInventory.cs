@@ -28,6 +28,10 @@ public class PlayerInventory : MonoBehaviour
         UIManager.Instance.SetItens(item, inventarioInts.Count); // Altera o texto do inventário para o nome do item (CollectMessage)
         inventarioInts.Add(item); // Adiciona o item na lista
     }
+    public void AddInvisibleItem(Interativos item)
+    {
+        inventarioInts.Add(item);
+    }
     public bool CheckItem(Interativos[] item) // Verifica se um item existe na lista
     {
         foreach (Interativos index in item)
