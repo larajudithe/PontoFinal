@@ -35,7 +35,7 @@ public class SmashButton : MonoBehaviour
         {
             slider.value += acressValue;
         }
-        if (slider.value >= (slider.maxValue - acressValue*2))
+        if (slider.value >= (slider.maxValue - acressValue))
         {
             Debug.Log("Puzzle completed!");
             OnPuzzleCompleted.Invoke();

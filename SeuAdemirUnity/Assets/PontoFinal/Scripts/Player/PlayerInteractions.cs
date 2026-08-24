@@ -155,6 +155,7 @@ public class PlayerInteractions : MonoBehaviour
         {
             //Debug.Log("Pode finalizar interação");
             canFinish = true;
+            UIManager.Instance.SetEndInteractionImage(true);
             if (currentInterativo.GetImage() == null && !currentInterativo.GetPegavel()) // Caso o objeto não tenha imagem e nem seja seguravel, termina interação
             {
                 //Debug.Log("Termino antecipado");
@@ -177,6 +178,7 @@ public class PlayerInteractions : MonoBehaviour
         Cursor.visible = false;
         canFinish = false;
         isInteracting = false;
+        UIManager.Instance.SetEndInteractionImage(false);
         UIManager.Instance.SetInterativoImage(null, false); // Desabilita a imagem do canvas
         // ExtintorScript.ExitPlayer();
         if (currentInterativo.GetInventoryItem()) // Coleta o item para o invenrário
