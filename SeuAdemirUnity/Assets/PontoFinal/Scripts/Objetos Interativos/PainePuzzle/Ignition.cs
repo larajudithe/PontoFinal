@@ -14,8 +14,9 @@ public class Ignition : MonoBehaviour
     private float ativeTime = 0;
     private float passiveTime = 0;
     [Header("Goal")]
-    [SerializeField] private float goalMin = 0.7f;
-    [SerializeField] private float goalMax = 0.75f;
+    [SerializeField] private float goalMin;
+    [SerializeField] private float goalMax;
+    [SerializeField] private GameObject goalImage;
     private InputAction interAction;
     private bool startIgnition = false;
     public UnityEvent OnPuzzleComplete;
@@ -29,6 +30,8 @@ public class Ignition : MonoBehaviour
     {
         //progressIgnitionImage = GetComponent<Image>();
         Debug.Log(progressIgnitionImage.fillAmount);
+        goalImage.transform.rotation = Quaternion.Euler(goalImage.transform.rotation.x, goalImage.transform.rotation.y, 360 * goalMin);
+        goalImage.GetComponent<Image>().fillAmount = goalMax - goalMin;
     }
     void Update()
     {
@@ -36,31 +39,21 @@ public class Ignition : MonoBehaviour
         {
             //Debug.Log("Ignition");
             Debug.Log(progressIgnitionImage.fillAmount);
-            passiveTime += Time.deltaTime;
-            if (passiveTime >= passiveMaxTime)
-            {
-                if (progressIgnitionImage.fillAmount > passiveProgress)
-                {
-                    progressIgnitionImage.fillAmount -= passiveProgress;
-                }
-                passiveTime = 0;
-            }
+            //passiveTime += Time.deltaTime;
+            progressIgnitionImage.fillAmount -= passiveProgress * Time.deltaTime;
+            //passiveTime -= passiveMaxTime;
             ativeTime += Time.deltaTime;
             if (ativeTime >= ativeMaxTime)
             {
                 progressIgnitionImage.fillAmount += ativeProgress;
-                /*if (progressIgnitionImage.fillAmount > 1)
-                {
-                    progressIgnitionImage.fillAmount = 1;
-                }*/
-                ativeTime = 0;
+                ativeTime -= ativeMaxTime;
             }
         }
         if (startIgnition && interAction.WasReleasedThisFrame())
         {
             if (progressIgnitionImage.fillAmount > goalMin && progressIgnitionImage.fillAmount < goalMax)
             {
-                Debug.Log("Hey bro");
+                //Debug.Log("Hey bro");
                 OnPuzzleComplete.Invoke();
             }
             progressIgnition.SetActive(false);

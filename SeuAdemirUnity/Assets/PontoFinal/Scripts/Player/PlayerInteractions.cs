@@ -73,7 +73,7 @@ public class PlayerInteractions : MonoBehaviour
         if (Physics.Raycast(originPoint, myCamera.transform.forward, out hit, rayDistance)) // Se o raycast colidir com algum objeto
         {
             ObjectInterativo objectInterativo = hit.collider.GetComponent<ObjectInterativo>(); // Pega o script ObjectInterativo do objeto atingido
-            if (objectInterativo != null) // Se o objeto atingido tiver o script ObjectInterativo
+            if (objectInterativo != null && objectInterativo.enabled) // Se o objeto atingido tiver o script ObjectInterativo
             {
                 UIManager.Instance.ChangeInteract(true); // Ativa o cursor de interação
                 if (interactAction.WasPressedThisFrame()) // Botão esquerdo do mouse
