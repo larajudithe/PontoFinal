@@ -32,7 +32,7 @@ public class PlayerInteractions : MonoBehaviour
     [Header("Avulsos")]
     private bool canFinish = false; // Pode terminar a alteração
     private Camera myCamera; // Camera
-    [SerializeField] public Extintor ExtintorScript;
+    // [SerializeField] public Extintor ExtintorScript;
     [SerializeField] private AudioPlayer audioPlayer;
 
 
