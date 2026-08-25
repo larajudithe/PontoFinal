@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{a5c92276-473d-4ae5-9ce7-366c97fb2211}">
+		<property name="assetPath">
+			<value>Papeis/PapelMaster.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.44918750000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dd89cf66-d682-401e-b3e5-66c5cbfca1ea}</destination>
+		</relationship>
+	</object>
+</objects>
