@@ -11,7 +11,7 @@ public class FireClone : MonoBehaviour
     [SerializeField] PlayerController PlayerControllerScript;
     GameObject clone;
     GameObject clone2;
-    public int fogo;
+    int fogo = 7;
 
     void Start()
     {
