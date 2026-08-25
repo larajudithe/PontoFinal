@@ -6,12 +6,12 @@ public class FireClone : MonoBehaviour
     int posicaoz = 1;
     public GameObject originalObject;
     public Transform Fire;
-    public Transform Fire2;
+    // public Transform Fire2;
     Vector3 offset;
     [SerializeField] PlayerController PlayerControllerScript;
     GameObject clone;
-    GameObject clone2;
-    int fogo = 5;
+    // GameObject clone2;
+    public int fogo = 4;
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class FireClone : MonoBehaviour
         posicaoz += 1;
         yield return new WaitForSeconds(20f);
         clone = Instantiate(originalObject, Fire.position - offset, originalObject.transform.rotation);
-        clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
+        // clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -43,6 +43,7 @@ public class FireClone : MonoBehaviour
         if (fogo == 0)
         {
             Destroy(clone);
+            Destroy(gameObject);
         }
     }
 }

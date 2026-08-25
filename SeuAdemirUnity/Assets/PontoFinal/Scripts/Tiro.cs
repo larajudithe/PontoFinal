@@ -3,7 +3,6 @@ using UnityEngine;
 public class Tiro : MonoBehaviour
 {
     [SerializeField] FireClone FireCloneScript;
-    int fogo = 5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,9 +14,9 @@ public class Tiro : MonoBehaviour
     {
 
     }
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("fogo: " + fogo);
+        Debug.Log("fogo: " + FireCloneScript.fogo);
         if (other.gameObject.CompareTag("Fogo"))
         {
             FireCloneScript.PerderFogo();
