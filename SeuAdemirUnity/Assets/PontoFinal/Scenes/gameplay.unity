@@ -190,7 +190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6399606348869975752, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8884,6 +8884,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1b6eed78b936d409cf9c54ef2a2044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractions
+--- !u!114 &727251308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727251287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11d4e7d782897b4582aae491e5d5813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControleCursor
 --- !u!1 &738695955
 GameObject:
   m_ObjectHideFlags: 0
@@ -15885,6 +15897,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 727251308}
+          m_TargetAssemblyTypeName: ControleCursor, Assembly-CSharp
+          m_MethodName: LiberarMouse
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   OnInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -17417,6 +17441,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3880154656995208322, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       insertIndex: -1
       addedObject: {fileID: 727251296}
+    - targetCorrespondingSourceObject: {fileID: 3880154656995208322, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 727251308}
   m_SourcePrefab: {fileID: 100100000, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
 --- !u!1 &1187592498
 GameObject:
@@ -29458,7 +29485,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -29483,7 +29510,7 @@ PrefabInstance:
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 985282053}
+      objectReference: {fileID: 727251308}
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -29502,7 +29529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: EndPuzzle
+      value: BloquearMouse
       objectReference: {fileID: 0}
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
@@ -29518,7 +29545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PainelPuzzle, Assembly-CSharp
+      value: ControleCursor, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 190665736210037084, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -29534,7 +29561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 715423496368649248, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2217680687521430079, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -29546,7 +29573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2317194510511502572, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2393006206165379964, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
@@ -29555,6 +29582,10 @@ PrefabInstance:
     - target: {fileID: 2587956485392642398, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296997923076696114, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: goalMax
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 3296997923076696114, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: goalMin
@@ -29950,15 +29981,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -30155,6 +30186,10 @@ PrefabInstance:
     - target: {fileID: 8684520523864917371, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8808770250527110757, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: acressValue
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8887939105211023451, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
