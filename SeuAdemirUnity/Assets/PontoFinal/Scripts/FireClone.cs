@@ -6,12 +6,12 @@ public class FireClone : MonoBehaviour
     int posicaoz = 1;
     public GameObject originalObject;
     public Transform Fire;
-    // public Transform Fire2;
+    public Transform Fire2;
     Vector3 offset;
     [SerializeField] PlayerController PlayerControllerScript;
     GameObject clone;
-    // GameObject clone2;
-    public int fogo = 4;
+    GameObject clone2;
+    public int fogo;
 
     void Start()
     {
@@ -26,9 +26,9 @@ public class FireClone : MonoBehaviour
     IEnumerator ClonarFogo()
     {
         posicaoz += 1;
-        yield return new WaitForSeconds(20f);
+        yield return new WaitForSeconds(15f);
         clone = Instantiate(originalObject, Fire.position - offset, originalObject.transform.rotation);
-        // clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
+        clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -39,10 +39,12 @@ public class FireClone : MonoBehaviour
     }
     public void PerderFogo()
     {
+        Debug.Log("fogo: " + fogo);
         fogo -= 1;
         if (fogo == 0)
         {
             Destroy(clone);
+            Destroy(clone2);
             Destroy(gameObject);
         }
     }

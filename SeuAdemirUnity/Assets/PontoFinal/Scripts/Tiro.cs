@@ -16,7 +16,7 @@ public class Tiro : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("fogo: " + FireCloneScript.fogo);
+        // Debug.Log("fogo: " + FireCloneScript.fogo);
         if (other.gameObject.CompareTag("Fogo"))
         {
             FireCloneScript.PerderFogo();
