@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SadBoy : MonoBehaviour
+public class CinematicManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,9 +12,5 @@ public class SadBoy : MonoBehaviour
     void Update()
     {
         
-    }
-    public void GarotoTriste()
-    {
-        Debug.Log("Triste");
     }
 }
