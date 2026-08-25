@@ -53,12 +53,4 @@ public class UIManager : MonoBehaviour
     {
         captionsText.text = text;
     }
-    public void BackToMenu()
-    {
-        SceneMenager.Instance.LoadMenu();
-    }
-    public void Sair()
-    {
-        SceneMenager.Instance.Sair();
-    }
 }
