@@ -1415,6 +1415,7 @@ GameObject:
   - component: {fileID: 332819213}
   - component: {fileID: 332819215}
   - component: {fileID: 332819214}
+  - component: {fileID: 332819216}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -1531,6 +1532,21 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &332819216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332819212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607e604589732c54e9982e43ac2f35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LuzesController
+  minIntensity: 0.5
+  maxIntensity: 2
+  flickerSpeed: 0.1
 --- !u!1 &341905622
 GameObject:
   m_ObjectHideFlags: 0
@@ -26127,6 +26143,7 @@ GameObject:
   - component: {fileID: 1690417035}
   - component: {fileID: 1690417037}
   - component: {fileID: 1690417036}
+  - component: {fileID: 1690417038}
   m_Layer: 0
   m_Name: Point Light (2)
   m_TagString: Untagged
@@ -26243,6 +26260,21 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1690417038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690417034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607e604589732c54e9982e43ac2f35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LuzesController
+  minIntensity: 0.5
+  maxIntensity: 2
+  flickerSpeed: 0.1
 --- !u!1 &1697616633
 GameObject:
   m_ObjectHideFlags: 0
@@ -27028,6 +27060,7 @@ GameObject:
   - component: {fileID: 1825934532}
   - component: {fileID: 1825934534}
   - component: {fileID: 1825934533}
+  - component: {fileID: 1825934535}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -27144,6 +27177,21 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &1825934535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825934531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607e604589732c54e9982e43ac2f35f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LuzesController
+  minIntensity: 0.5
+  maxIntensity: 2
+  flickerSpeed: 0.1
 --- !u!1 &1828800468
 GameObject:
   m_ObjectHideFlags: 0
@@ -28739,6 +28787,8 @@ MonoBehaviour:
   sceneGame: gameplay
   sceneMenu: Menu
   changeTime: 0
+  painelOPC: {fileID: 0}
+  painelMENU: {fileID: 0}
 --- !u!4 &2020984180
 Transform:
   m_ObjectHideFlags: 0
