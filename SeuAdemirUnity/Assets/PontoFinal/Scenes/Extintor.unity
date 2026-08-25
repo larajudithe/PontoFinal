@@ -1103,60 +1103,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 208637928}
     - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_Size.x
-      value: 11.791628
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_Size.y
-      value: 11.767151
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_Size.z
-      value: 60.44347
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_Center.x
-      value: 0.05429121
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_Center.y
-      value: 0.010672542
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_Center.z
-      value: 30.072712
-      objectReference: {fileID: 0}
-    - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
       propertyPath: m_Name
       value: Tiro
-      objectReference: {fileID: 0}
-    - target: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503711829084620561, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: ShapeModule.angle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6503711829084620561, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: ShapeModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7082387938087709051, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7082387938087709051, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7082387938087709051, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7082387938087709051, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
       propertyPath: m_LocalPosition.x
