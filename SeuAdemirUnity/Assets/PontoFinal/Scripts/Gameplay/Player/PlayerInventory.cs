@@ -44,7 +44,7 @@ public class PlayerInventory : MonoBehaviour
             }
             else
             {
-                ExtintorScript.Ativar1();
+                //ExtintorScript.Ativar1();
             }
         }
         return true;

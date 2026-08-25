@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="EncodableAsset" id="{d3584c85-8844-497c-a97d-5e4d9631f041}">
+	<object class="EncodableAsset" id="{0d081959-f7da-4489-a82a-1b38894a9558}">
 		<property name="assetPath">
-			<value>Chapa/Parafusos/</value>
+			<value>Chapa/</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{dd89cf66-d682-401e-b3e5-66c5cbfca1ea}</destination>

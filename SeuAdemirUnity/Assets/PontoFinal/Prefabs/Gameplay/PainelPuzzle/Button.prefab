@@ -241,7 +241,7 @@ MonoBehaviour:
       Data2: 1173288151
       Data3: 1455848099
       Data4: 626236233
-    Path: event:/Parafusos/Unscrew
+    Path: event:/Chapa/Parafusos/Unscrew
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
       Data2: 1164688161
       Data3: 318012315
       Data4: 1047739090
-    Path: event:/Parafusos/Fall
+    Path: event:/Chapa/Parafusos/Fall
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

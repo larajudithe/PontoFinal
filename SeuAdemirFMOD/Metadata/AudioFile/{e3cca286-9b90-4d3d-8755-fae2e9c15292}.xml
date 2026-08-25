@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{e3cca286-9b90-4d3d-8755-fae2e9c15292}">
 		<property name="assetPath">
-			<value>Parafusos/Parafuso-Casindo.mp3</value>
+			<value>Chapa/Parafusos/Parafuso-Casindo.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
