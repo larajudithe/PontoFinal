@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using FMODUnity;
 
 public class Ignition : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Ignition : MonoBehaviour
     private bool startIgnition = false;
     public UnityEvent OnPuzzleComplete;
     [SerializeField] private Image progressIgnitionImage;
+    private StudioEventEmitter ignitionSound;
 
     void Awake()
     {
@@ -32,6 +34,7 @@ public class Ignition : MonoBehaviour
         Debug.Log(progressIgnitionImage.fillAmount);
         goalImage.transform.rotation = Quaternion.Euler(goalImage.transform.rotation.x, goalImage.transform.rotation.y, 360 * goalMin);
         goalImage.GetComponent<Image>().fillAmount = goalMax - goalMin;
+        ignitionSound = GetComponent<StudioEventEmitter>();
     }
     void Update()
     {
