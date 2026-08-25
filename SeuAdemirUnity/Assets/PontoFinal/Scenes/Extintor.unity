@@ -446,6 +446,14 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1735439465423251014, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255737366983612434, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: fogo
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2255737366983612434, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
       propertyPath: PlayerControllerScript
       value: 
