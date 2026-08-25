@@ -21,19 +21,18 @@ public class FireClone : MonoBehaviour
     }
     void Update()
     {
-        
+
     }
     IEnumerator ClonarFogo()
     {
         posicaoz += 1;
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         clone = Instantiate(originalObject, Fire.position - offset, originalObject.transform.rotation);
         clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
-        Debug.Log(posicaoz);
     }
     private void OnTriggerEnter(Collider other)
     {
-         if (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             PlayerControllerScript.PerderVida();
         }
@@ -41,11 +40,9 @@ public class FireClone : MonoBehaviour
     public void PerderFogo()
     {
         fogo -= 1;
-        if(fogo == 0)
+        if (fogo == 0)
         {
-        Destroy(clone);
-        Destroy(clone2);
+            Destroy(clone);
         }
-        Debug.Log("fogo: " + fogo);
     }
 }
