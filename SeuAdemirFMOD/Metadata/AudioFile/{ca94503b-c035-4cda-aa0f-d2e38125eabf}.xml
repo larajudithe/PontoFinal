@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{d922e7b2-c4ac-457d-ab66-3debabcbfb17}">
+	<object class="AudioFile" id="{ca94503b-c035-4cda-aa0f-d2e38125eabf}">
 		<property name="assetPath">
-			<value>freesoundeffects-button-click-289742.mp3</value>
+			<value>universfield-click-button-140881.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.18285714285714286</value>
+			<value>0.49632653061224491</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{dd89cf66-d682-401e-b3e5-66c5cbfca1ea}</destination>
