@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private InputAction actionJump; // Ação Jump
     private InputAction actionExtintor; // Atira com o extintor
 
-    [Header ("Movimento")]
+    [Header("Movimento")]
     [SerializeField] private int playerSpeed; // Velocidade do jogador
     private Vector2 moveInput; // Movimento do jogador (-1, 0, 1
     private CharacterController characterController;
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         // Triggers when the player finally lets go of the button
         actionExtintor.canceled += OnHoldCanceled;
     }
-     private void OnDisable()
+    private void OnDisable()
     {
         actionExtintor.performed -= OnHoldPerformed;
         actionExtintor.canceled -= OnHoldCanceled;
@@ -81,7 +81,8 @@ public class PlayerController : MonoBehaviour
         if (characterController.isGrounded) // Verifica se o player esá no chão
         {
             verticalDirection = Vector3.down; // Impede o player de ganhar velocidade enquanto está parado
-        }else
+        }
+        else
         {
             verticalDirection += gravity * Time.deltaTime * Vector3.up; // Ganha velocidade em queda livre (gravidade)
         }
@@ -99,18 +100,17 @@ public class PlayerController : MonoBehaviour
     }
     public void PerderVida()
     {
-        vida -=1;
-        Debug.Log(vida);
+        vida -= 1;
+        Debug.Log("Vida: " + vida);
     }
 
-     private void OnHoldPerformed(InputAction.CallbackContext context)
+    private void OnHoldPerformed(InputAction.CallbackContext context)
     {
-       clone = Instantiate(TiroObject, Extintor.position, TiroObject.transform.rotation);
-       TiroScript.Movimentar();
+        TiroObject.SetActive(true);
     }
 
     private void OnHoldCanceled(InputAction.CallbackContext context)
     {
-        Destroy(clone);
+        TiroObject.SetActive(false);
     }
 }
