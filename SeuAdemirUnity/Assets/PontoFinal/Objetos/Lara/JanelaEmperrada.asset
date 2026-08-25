@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interativos
   pegavel: 0
   carregavel: 0
-  texto: Esta emperrada...
+  texto: Esta emperrada...Tlavez eu possa usar algo aqui
   audioEvent:
     Guid:
       Data1: 0
@@ -24,5 +24,6 @@ MonoBehaviour:
     Path: 
   image: {fileID: 0}
   stopInPuzzle: 0
+  captionTime: 3
   inventoryItem: 0
   collectMessage: 
