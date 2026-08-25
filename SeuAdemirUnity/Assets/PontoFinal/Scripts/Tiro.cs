@@ -18,7 +18,7 @@ public class Tiro : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         Debug.Log("fogo: " + fogo);
-        if (other.gameObject.CompareTag("fogo"))
+        if (other.gameObject.CompareTag("Fogo"))
         {
             FireCloneScript.PerderFogo();
         }
