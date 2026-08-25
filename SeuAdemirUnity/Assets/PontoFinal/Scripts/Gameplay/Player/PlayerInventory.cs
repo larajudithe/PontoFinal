@@ -5,9 +5,9 @@ using System.Runtime.CompilerServices;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField]
+    [SerializeField] Extintor ExtintorScript;
     private List<Interativos> inventarioInts = new(); // Lista de itens do inventário
-    public static PlayerInventory Instance {get; private set;} // Singleton
+    public static PlayerInventory Instance { get; private set; } // Singleton
     void Awake()
     {
         // Instanciamento do singleton
@@ -16,7 +16,7 @@ public class PlayerInventory : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-       Instance = this;
+        Instance = this;
     }
     public void AddItem(Interativos item) // Adicionar itens no inventário
     {
@@ -41,6 +41,10 @@ public class PlayerInventory : MonoBehaviour
             {
                 Debug.Log("Não contem " + index);
                 return false;
+            }
+            else
+            {
+                ExtintorScript.Ativar1();
             }
         }
         return true;

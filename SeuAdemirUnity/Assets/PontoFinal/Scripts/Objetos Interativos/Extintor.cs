@@ -17,11 +17,7 @@ public class Extintor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interacao == true)
-        {
-            transform.position = Player.position + offset;
-            FireCloneScript.Ativar();
-        }
+
     }
     public void FollowPlayer()
     {
@@ -30,5 +26,13 @@ public class Extintor : MonoBehaviour
     public void ExitPlayer()
     {
         interacao = false;
+    }
+    public void Ativar1()
+    {
+        if (interacao == true)
+        {
+            transform.position = Player.position + offset;
+            FireCloneScript.Ativar();
+        }
     }
 }
