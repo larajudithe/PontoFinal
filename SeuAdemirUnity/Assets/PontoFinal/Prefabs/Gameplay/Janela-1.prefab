@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3513198044280867161}
   - component: {fileID: 7705557322348119471}
   - component: {fileID: 2961949748566806113}
+  - component: {fileID: 5695710777763500489}
   m_Layer: 0
   m_Name: Janela-1
   m_TagString: Untagged
@@ -155,6 +156,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5695710777763500489}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCollectObjeto:
     m_PersistentCalls:
       m_Calls: []
@@ -175,3 +188,34 @@ MonoBehaviour:
   objetoParaAtivar: {fileID: 0}
   velocidade: 1
   sidePositionsZ: 3
+--- !u!114 &5695710777763500489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695153362816553677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1884955598
+      Data2: 1163468292
+      Data3: 130906507
+      Data4: 1850729058
+    Path: event:/Janelas/Janela Fechando
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

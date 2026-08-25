@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{8a8afb2e-2bf4-40a2-aa64-2938691d0999}">
 		<property name="assetPath">
-			<value>Janelas/49603404-curtain-closing-323254.mp3</value>
+			<value>Janelas/Fechando1.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
