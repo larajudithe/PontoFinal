@@ -5,7 +5,7 @@ using System.Collections;
 public class Extintor : MonoBehaviour
 {
     public Transform Player;
-    Vector3 offset = new Vector3(0f, 0f, -2f);
+    Vector3 offset = new Vector3(0f, 0f, 0f);
     private bool interacao = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     public GameObject TiroObject;
     public Transform Extintor;
     GameObject clone;
+    [SerializeField] Tiro TiroScript;
 
     int vida = 5;
 
@@ -105,6 +106,7 @@ public class PlayerController : MonoBehaviour
      private void OnHoldPerformed(InputAction.CallbackContext context)
     {
        clone = Instantiate(TiroObject, Extintor.position, TiroObject.transform.rotation);
+       TiroScript.Movimentar();
     }
 
     private void OnHoldCanceled(InputAction.CallbackContext context)

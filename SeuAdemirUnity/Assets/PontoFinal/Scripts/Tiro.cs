@@ -21,4 +21,8 @@ public class Tiro : MonoBehaviour
             FireCloneScript.PerderFogo();
         }
     }
+    public void Movimentar()
+    {
+        transform.position += new Vector3(0f, 0f, 1f) * Time.deltaTime;
+    }
 }
