@@ -112,6 +112,8 @@ GameObject:
   - component: {fileID: 1988081355923363771}
   - component: {fileID: 7994074124429690733}
   - component: {fileID: 7643565786811002065}
+  - component: {fileID: 7769677802749797948}
+  - component: {fileID: 6204440797232646069}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -129,7 +131,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.83112, y: 1.92, z: 7.52544}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75894046, y: 1.2755316, z: 0.75894046}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 387193614935850156}
@@ -231,8 +233,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   playerSpeed: 3
-  jumpHeight: 2
+  jumpHeight: 0.5
   jumpTime: 0.3
+  canJump: 0
+  TiroObject: {fileID: 0}
+  Extintor: {fileID: 0}
+  TiroScript: {fileID: 0}
 --- !u!143 &2258359007316219258
 CharacterController:
   m_ObjectHideFlags: 0
@@ -330,7 +336,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   rotationSpeed: 20
-  ExtintorScript: {fileID: 0}
   audioPlayer: {fileID: 0}
 --- !u!114 &1988081355923363771
 MonoBehaviour:
@@ -454,6 +459,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7769677802749797948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880154656995208322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3625e2d9d0b5945b71c9eb52e30810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PauseActions
+  inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  playerCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 0}
+--- !u!114 &6204440797232646069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880154656995208322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11d4e7d782897b4582aae491e5d5813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ControleCursor
 --- !u!1 &4912043558016129436
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +511,7 @@ Transform:
   m_GameObject: {fileID: 4912043558016129436}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.411, z: 1.176}
+  m_LocalPosition: {x: 0, y: -0.019, z: 1.176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
