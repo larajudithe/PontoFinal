@@ -39,8 +39,9 @@ public class PuzzleManager : MonoBehaviour
         // quando fizer 7 pontos, fecha o canvas/jogo
         else if (pontosTotais >= 7)
         {
-            FecharCanvas();
             parardeGirar.Invoke();
+            FecharCanvas();
+           // parardeGirar.Invoke();
 
         }
     }
@@ -82,6 +83,7 @@ public class PuzzleManager : MonoBehaviour
     Instantiate(prefabFicha, pontoDeSpawn.position, pontoDeSpawn.rotation);
      }
      
+     //GetComponent<Collider>().enabled = false;
 
     }
     
