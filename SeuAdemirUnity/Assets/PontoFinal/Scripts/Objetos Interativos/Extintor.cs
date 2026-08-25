@@ -5,6 +5,7 @@ using System.Collections;
 public class Extintor : MonoBehaviour
 {
     public Transform Player;
+    [SerializeField] FireClone FireCloneScript;
     Vector3 offset = new Vector3(0f, 0f, 0f);
     private bool interacao = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,6 +20,7 @@ public class Extintor : MonoBehaviour
         if (interacao == true)
         {
             transform.position = Player.position + offset;
+            FireCloneScript.Ativar();
         }
     }
     public void FollowPlayer()

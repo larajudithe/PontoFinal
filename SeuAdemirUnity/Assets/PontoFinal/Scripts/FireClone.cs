@@ -48,4 +48,8 @@ public class FireClone : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void Ativar()
+    {
+        gameObject.SetActive(true);
+    }
 }
