@@ -147,7 +147,7 @@ public class PlayerInteractions : MonoBehaviour
             audioPlayer.PlayAudio(interativo.GetAudio());
         }
         UIManager.Instance.SetCaptions(interativo.GetTexto());
-        Invoke("CanFinish", interativo.GetAudioDuration() + 0.5f); // Depois de um segundo pode terminar a interação
+        Invoke("CanFinish", interativo.GetAudioDuration() + interativo.GetCaptionTime()); // Depois de um segundo pode terminar a interação
     }
     private void CanFinish()
     {

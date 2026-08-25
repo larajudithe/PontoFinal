@@ -32,10 +32,12 @@ public class DragDrop : MonoBehaviour
             objectInitAnchoredPos = objectToDrag.anchoredPosition;
         }
 
+        /*
         if (puzzleManager == null)
         {
             puzzleManager = FindObjectOfType<PuzzleManager>();
         }
+        */
     }
 
     public void DragObject()
