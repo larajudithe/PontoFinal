@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private float jumpSpeed; // Velocidade do pulo
     [SerializeField] private float jumpHeight; // Altura do pulo
     [SerializeField] private float jumpTime; // Tempo do pulo
+    [SerializeField] private bool canJump;
 
     [Header("Camera")]
     private Camera myCamera;
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
         {
             verticalDirection += gravity * Time.deltaTime * Vector3.up; // Ganha velocidade em queda livre (gravidade)
         }
-        if (actionJump.WasPressedThisFrame() && characterController.isGrounded) // Pulo
+        if (actionJump.WasPressedThisFrame() && characterController.isGrounded && canJump) // Pulo
         {
             verticalDirection = jumpSpeed * Vector3.up;
         }

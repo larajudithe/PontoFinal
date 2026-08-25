@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] inventoryText; // Texto dos itens do inventário
     [Header("Images")]
     [SerializeField] private GameObject interactCursor; // Imagem que indíca que o personagem pode interagir
+    [SerializeField] private GameObject finishInteractionImage;
     [SerializeField] private Image InterativoImage; // Objetos com imagem na tela
     [SerializeField] private TextMeshProUGUI captionsText;
     private void Awake()
@@ -39,6 +40,10 @@ public class UIManager : MonoBehaviour
     {
         InterativoImage.sprite = sprite;
         InterativoImage.enabled = state;
+    }
+    public void SetEndInteractionImage(bool state)
+    {
+        finishInteractionImage.SetActive(state);
     }
     public void SetItens(Interativos interativo, int index) // Define os textos dos itens do inventário
     {

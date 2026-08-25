@@ -377,6 +377,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3292925553009838691, guid: d90d9ed66310ded45a0ef41901053c6b, type: 3}
+--- !u!4 &409267495 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d90d9ed66310ded45a0ef41901053c6b, type: 3}
+  m_PrefabInstance: {fileID: 409267488}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &640222475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,63 +570,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!1001 &1167371414
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.7
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.7499989
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.02212
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
-      propertyPath: m_Name
-      value: OnibusSeuAdemir (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4eb2800adf900b146974e9ed033711ee, type: 3}
 --- !u!1 &1196485539
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,6 +901,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1057834655664170062, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+      propertyPath: Extintor
+      value: 
+      objectReference: {fileID: 409267495}
+    - target: {fileID: 1057834655664170062, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+      propertyPath: TiroObject
+      value: 
+      objectReference: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
     - target: {fileID: 3880154656995208322, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1013,4 +969,3 @@ SceneRoots:
   - {fileID: 640222475}
   - {fileID: 74134737}
   - {fileID: 409267488}
-  - {fileID: 1167371414}

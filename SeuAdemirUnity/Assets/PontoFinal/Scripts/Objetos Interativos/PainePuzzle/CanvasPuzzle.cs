@@ -8,6 +8,8 @@ public class CanvasPuzzle : MonoBehaviour
     [SerializeField] private GameObject smashUI;
     [SerializeField] private GameObject chapa;
     [SerializeField] private Button Fios;
+    [SerializeField] private Animator[] screwsAnimators;
+    private bool readyToStartSmash = false;
     void Start()
     {
         
@@ -16,16 +18,19 @@ public class CanvasPuzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (readyToStartSmash)
+        {
+            StartSmash();
+        }
     }
     public void AddUnscrew()
     {
-        Debug.Log("Chamado");
+       // Debug.Log("Chamado");
         unscreleds++;
         if (unscreleds >= 4)
         {
-            smashUI.SetActive(true);
-            Debug.Log("Puzzle completed!");
+            readyToStartSmash=true;
+            Debug.Log("Parafuso completed!");
         }
     }
     public void InsidePainel()
@@ -37,5 +42,17 @@ public class CanvasPuzzle : MonoBehaviour
             parafuso.SetActive(false);
         }
         Fios.enabled = true;
+    }
+    private void StartSmash()
+    {
+        foreach (Animator screwAnimator in screwsAnimators)
+        {
+            if (!screwAnimator.GetCurrentAnimatorStateInfo(0).IsName("Big"))
+            {
+                return;
+            }
+        }
+        readyToStartSmash = false;
+        smashUI.SetActive(true);
     }
 }

@@ -32,7 +32,7 @@ public class PlayerInteractions : MonoBehaviour
     [Header("Avulsos")]
     private bool canFinish = false; // Pode terminar a alteração
     private Camera myCamera; // Camera
-    [SerializeField] public Extintor ExtintorScript;
+    // [SerializeField] public Extintor ExtintorScript;
     [SerializeField] private AudioPlayer audioPlayer;
 
 
@@ -73,7 +73,7 @@ public class PlayerInteractions : MonoBehaviour
         if (Physics.Raycast(originPoint, myCamera.transform.forward, out hit, rayDistance)) // Se o raycast colidir com algum objeto
         {
             ObjectInterativo objectInterativo = hit.collider.GetComponent<ObjectInterativo>(); // Pega o script ObjectInterativo do objeto atingido
-            if (objectInterativo != null) // Se o objeto atingido tiver o script ObjectInterativo
+            if (objectInterativo != null && objectInterativo.enabled) // Se o objeto atingido tiver o script ObjectInterativo
             {
                 UIManager.Instance.ChangeInteract(true); // Ativa o cursor de interação
                 if (interactAction.WasPressedThisFrame()) // Botão esquerdo do mouse
@@ -155,6 +155,7 @@ public class PlayerInteractions : MonoBehaviour
         {
             //Debug.Log("Pode finalizar interação");
             canFinish = true;
+            UIManager.Instance.SetEndInteractionImage(true);
             if (currentInterativo.GetImage() == null && !currentInterativo.GetPegavel()) // Caso o objeto não tenha imagem e nem seja seguravel, termina interação
             {
                 //Debug.Log("Termino antecipado");
@@ -177,6 +178,7 @@ public class PlayerInteractions : MonoBehaviour
         Cursor.visible = false;
         canFinish = false;
         isInteracting = false;
+        UIManager.Instance.SetEndInteractionImage(false);
         UIManager.Instance.SetInterativoImage(null, false); // Desabilita a imagem do canvas
         // ExtintorScript.ExitPlayer();
         if (currentInterativo.GetInventoryItem()) // Coleta o item para o invenrário
