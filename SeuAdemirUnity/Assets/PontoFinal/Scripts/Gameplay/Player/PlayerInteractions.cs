@@ -168,6 +168,8 @@ public class PlayerInteractions : MonoBehaviour
             Debug.Log("Puzzle");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            //Debug.Log(Cursor.visible);
+            //Debug.Log(Cursor.lockState);
             return;
         }
     }
