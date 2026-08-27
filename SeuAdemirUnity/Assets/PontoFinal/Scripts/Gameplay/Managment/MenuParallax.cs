@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class MenuParallax : MonoBehaviour
 {
-    [SerializeField] private float offsetMultiplicator = 1f;
+    [SerializeField] private float offsetMultiplicator = 5f;
     [SerializeField] private float smoothTime = 0.3f;
     private Vector2 startPosition;
     private Vector3 velocity;
@@ -25,7 +25,7 @@ public class MenuParallax : MonoBehaviour
     {
         //Vector2 mousePos = mouseAction.ReadValue<Vector2>();
         Vector2 mousePos = mouseAction.ReadValue<Vector2>();
-        Vector2 offset = Camera.main.ScreenToViewportPoint(mousePos);
+        Vector2 offset = Camera.main.ScreenToViewportPoint(mousePos)  - new Vector3(0.5f, 0.5f);
         transform.position = Vector3.SmoothDamp(transform.position, startPosition + (offset * offsetMultiplicator), ref velocity, smoothTime);
     }
 
