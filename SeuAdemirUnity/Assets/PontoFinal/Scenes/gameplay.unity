@@ -9179,7 +9179,7 @@ PrefabInstance:
       addedObject: {fileID: 1391411613}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7dba10b840db5545a53168da0ae3494, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1391411617}
+      addedObject: {fileID: 1391411620}
   m_SourcePrefab: {fileID: 100100000, guid: a7dba10b840db5545a53168da0ae3494, type: 3}
 --- !u!1001 &752669615
 PrefabInstance:
@@ -17749,6 +17749,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5259990199197609123, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+      propertyPath: ExtintorScript
+      value: 
+      objectReference: {fileID: 1391411620}
+    - target: {fileID: 5259990199197609123, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: StopMovimentation.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -24529,7 +24533,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.5719204, y: 16.916164, z: 4.8841143}
   m_Center: {x: -0.000015296035, y: 8.887068, z: -0.0000015497208}
---- !u!114 &1391411617
+--- !u!114 &1391411620
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24541,8 +24545,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63503665e6827de47914ecfb57f37af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
-  Player: {fileID: 36062382}
-  FireCloneScript: {fileID: 2255737366983612434, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+  FireCloneScript: {fileID: 353106447}
+  player: {fileID: 36062382}
 --- !u!1 &1391946387
 GameObject:
   m_ObjectHideFlags: 0

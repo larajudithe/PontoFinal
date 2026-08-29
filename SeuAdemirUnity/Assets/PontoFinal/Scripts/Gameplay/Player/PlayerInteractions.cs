@@ -34,6 +34,7 @@ public class PlayerInteractions : MonoBehaviour
     private Camera myCamera; // Camera
     // [SerializeField] public Extintor ExtintorScript;
     [SerializeField] private AudioPlayer audioPlayer;
+    [SerializeField] Extintor ExtintorScript;
 
 
     private bool isInteracting = false;
@@ -108,6 +109,9 @@ public class PlayerInteractions : MonoBehaviour
             if (!currentInteraction.GetInterativo().GetCarregavel())
             {
                 StopMovimentation.Invoke(); // Para a movimentação do jogador
+            }else
+            {
+                ExtintorScript.FollowPlayer();
             }
             isInteracting = true; // Ativa a interação
             bool hasPreviousItem = false; // Existe interações anteriores

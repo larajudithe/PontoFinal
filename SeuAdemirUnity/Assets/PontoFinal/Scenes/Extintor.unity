@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63503665e6827de47914ecfb57f37af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
-  Player: {fileID: 198516152}
+  player: {fileID: 743918555}
 --- !u!64 &409267492
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -525,7 +525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4808692270750588962, guid: 007c21f7ac355ea4b8e89bdf7a6a1a62, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15100002
+      value: 0.008532822
       objectReference: {fileID: 0}
     - target: {fileID: 4808692270750588962, guid: 007c21f7ac355ea4b8e89bdf7a6a1a62, type: 3}
       propertyPath: m_LocalPosition.z
@@ -579,6 +579,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69197a62687af1647af0f43224c31da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!4 &743918555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 295190024449072755, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+  m_PrefabInstance: {fileID: 1424865211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &867929300 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
@@ -831,7 +836,7 @@ Transform:
   m_GameObject: {fileID: 1196485539}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.07, y: -0.15100002, z: 8.59422}
+  m_LocalPosition: {x: -6.07, y: 0.008532822, z: 8.59422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

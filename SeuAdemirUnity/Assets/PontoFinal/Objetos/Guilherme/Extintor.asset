@@ -24,5 +24,6 @@ MonoBehaviour:
     Path: 
   image: {fileID: 0}
   stopInPuzzle: 0
+  captionTime: 0
   inventoryItem: 1
   collectMessage: 

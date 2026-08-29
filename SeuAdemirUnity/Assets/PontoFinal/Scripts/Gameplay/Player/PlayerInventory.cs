@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] Extintor ExtintorScript;
+    [SerializeField]
     private List<Interativos> inventarioInts = new(); // Lista de itens do inventário
     public static PlayerInventory Instance { get; private set; } // Singleton
     void Awake()
@@ -41,10 +41,6 @@ public class PlayerInventory : MonoBehaviour
             {
                 Debug.Log("Não contem " + index);
                 return false;
-            }
-            else
-            {
-                //ExtintorScript.Ativar1();
             }
         }
         return true;

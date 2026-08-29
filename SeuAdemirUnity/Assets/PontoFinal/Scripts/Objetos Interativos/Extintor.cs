@@ -1,38 +1,28 @@
 using UnityEngine;
-using UnityEngine.Events;
-using System.Collections;
 
 public class Extintor : MonoBehaviour
 {
-    public Transform Player;
     [SerializeField] FireClone FireCloneScript;
-    Vector3 offset = new Vector3(0f, 0f, 0f);
-    private bool interacao = false;
+    public Transform player;
+    Vector3 offset;
+    bool seguir = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        offset = new Vector3(0.5f, 0f, -0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if(seguir==true)
+        {
+        transform.position = player.transform.position + offset;
+        }
     }
     public void FollowPlayer()
     {
-        interacao = true;
-    }
-    public void ExitPlayer()
-    {
-        interacao = false;
-    }
-    public void Ativar1()
-    {
-        if (interacao == true)
-        {
-            transform.position = Player.position + offset;
-            FireCloneScript.Ativar();
-        }
+        seguir = true;
+        FireCloneScript.Ativar();
     }
 }
