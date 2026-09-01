@@ -41,7 +41,7 @@ public class FireClone : MonoBehaviour
     {
         Debug.Log("fogo: " + fogo);
         fogo -= 1;
-        if (fogo == 0)
+        if (fogo <= 0)
         {
             Destroy(clone);
             Destroy(clone2);

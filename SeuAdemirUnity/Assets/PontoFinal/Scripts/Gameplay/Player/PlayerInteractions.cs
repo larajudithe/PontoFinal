@@ -32,7 +32,6 @@ public class PlayerInteractions : MonoBehaviour
     [Header("Avulsos")]
     private bool canFinish = false; // Pode terminar a alteração
     private Camera myCamera; // Camera
-    // [SerializeField] public Extintor ExtintorScript;
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] Extintor ExtintorScript;
 
@@ -103,15 +102,16 @@ public class PlayerInteractions : MonoBehaviour
         //Debug.Log("Começou interação");
         currentInteraction = objeto;
         currentInteraction.OnInteract.Invoke(); // Chama o evento de interação com o objeto
-        // ExtintorScript.FollowPlayer();
         if (currentInteraction.GetInterativo() != null) // Verifica se o objeto tem um scriptable object
         {
             if (!currentInteraction.GetInterativo().GetCarregavel())
             {
                 StopMovimentation.Invoke(); // Para a movimentação do jogador
-            }else
+            }
+            if(currentInteraction.GetInterativo().GetCarregavel())
             {
                 ExtintorScript.FollowPlayer();
+                Debug.Log("Extintor pegavel");
             }
             isInteracting = true; // Ativa a interação
             bool hasPreviousItem = false; // Existe interações anteriores
@@ -186,7 +186,7 @@ public class PlayerInteractions : MonoBehaviour
         isInteracting = false;
         UIManager.Instance.SetEndInteractionImage(false);
         UIManager.Instance.SetInterativoImage(null, false); // Desabilita a imagem do canvas
-        // ExtintorScript.ExitPlayer();
+        // ExtintorScript.FinishPlayer();
         if (currentInterativo.GetInventoryItem()) // Coleta o item para o invenrário
         {
             PlayerInventory.Instance.AddItem(currentInterativo);

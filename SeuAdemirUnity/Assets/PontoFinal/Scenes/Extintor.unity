@@ -211,6 +211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7781031396214839147, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.2000122
+      objectReference: {fileID: 0}
     - target: {fileID: 8324486820916387199, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: openInventory.m_Name
       value: Open Inventory
@@ -360,8 +364,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cd6924fdc292c4d9c22b6641051053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectInterativo
-  interativo: {fileID: 11400000, guid: 65e1074527c688148b5b3edf3eb81218, type: 2}
-  intAnteriores: []
+  interativo: {fileID: 11400000, guid: ecba5035795932f4194b004bb12b8aa2, type: 2}
+  intAnteriores:
+  - itemRequirido: []
+    interativoAtual: {fileID: 0}
+    OnInteractAtual:
+      m_PersistentCalls:
+        m_Calls: []
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -394,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63503665e6827de47914ecfb57f37af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
+  FireCloneScript: {fileID: 208637928}
   player: {fileID: 743918555}
 --- !u!64 &409267492
 MeshCollider:
