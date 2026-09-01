@@ -15,6 +15,10 @@ public class SceneMenager : MonoBehaviour
         Debug.Log("Game");
         SceneManager.LoadScene(sceneMenu); // Ir para a cena de jogo
     }
+    public void LoadFimal()
+    {
+        SceneManager.LoadScene("Final"); // Ir para a cena de jogo
+    }
 
     public void AbrirOPC()
     {
