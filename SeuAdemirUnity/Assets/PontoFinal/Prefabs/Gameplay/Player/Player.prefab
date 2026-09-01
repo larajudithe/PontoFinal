@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 7643565786811002065}
   - component: {fileID: 6204440797232646069}
   - component: {fileID: 3853103758953491403}
+  - component: {fileID: 2476878509878723283}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -239,6 +240,7 @@ MonoBehaviour:
   TiroObject: {fileID: 0}
   Extintor: {fileID: 0}
   TiroScript: {fileID: 0}
+  timePassos: 0.4
 --- !u!143 &2258359007316219258
 CharacterController:
   m_ObjectHideFlags: 0
@@ -287,6 +289,7 @@ MonoBehaviour:
       m_Calls: []
   rotationSpeed: 20
   audioPlayer: {fileID: 0}
+  ExtintorScript: {fileID: 0}
 --- !u!114 &1988081355923363771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,6 +439,37 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   playerCanvas: {fileID: 0}
   pauseCanvas: {fileID: 0}
+--- !u!114 &2476878509878723283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3880154656995208322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1952221297
+      Data2: 1282579076
+      Data3: 532885418
+      Data4: -1062123372
+    Path: event:/Passos
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &4912043558016129436
 GameObject:
   m_ObjectHideFlags: 0

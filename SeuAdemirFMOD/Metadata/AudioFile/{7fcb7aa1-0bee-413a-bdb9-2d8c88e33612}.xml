@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{8f8f7825-cd1d-4017-9dfc-582040472f46}">
+	<object class="AudioFile" id="{7fcb7aa1-0bee-413a-bdb9-2d8c88e33612}">
 		<property name="assetPath">
-			<value>Fundo/BG.wav</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>Extintor/Extintor2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>94.493812500000004</value>
+			<value>2.5987301587301586</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{dd89cf66-d682-401e-b3e5-66c5cbfca1ea}</destination>

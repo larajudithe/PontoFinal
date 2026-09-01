@@ -1,3 +1,5 @@
+using System.Collections;
+using FMODUnity;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -32,6 +34,15 @@ public class PlayerController : MonoBehaviour
     public GameObject TiroObject;
     public Transform Extintor;
     GameObject clone;
+<<<<<<< Updated upstream
+=======
+    [SerializeField] Tiro TiroScript;
+    [SerializeField] private float timePassos;
+    private StudioEventEmitter passosSound;
+    private Coroutine passosPlaying;
+
+    int vida = 5;
+>>>>>>> Stashed changes
 
     void Awake()
     {
@@ -57,6 +68,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        passosSound = GetComponent<StudioEventEmitter>();
         myCamera = Camera.main;
         // Configuração do cursor
         Cursor.lockState = CursorLockMode.Locked;
@@ -75,6 +87,13 @@ public class PlayerController : MonoBehaviour
         // Define a direção do movimento
         forwardDirection = moveInput.y * playerSpeed * transform.forward;
         strafeDirection = moveInput.x * playerSpeed * transform.right;
+        if (characterController.velocity.magnitude > 0)
+        {
+            if (passosPlaying == null)
+            {
+                passosPlaying = StartCoroutine(PlayPassos(timePassos));
+            }
+        }
         if (characterController.isGrounded) // Verifica se o player esá no chão
         {
             verticalDirection = Vector3.down; // Impede o player de ganhar velocidade enquanto está parado
@@ -104,5 +123,11 @@ public class PlayerController : MonoBehaviour
     private void OnHoldCanceled(InputAction.CallbackContext context)
     {
         TiroObject.SetActive(false);
+    }
+    private IEnumerator PlayPassos(float time)
+    {
+        passosSound.Play();
+        yield return new WaitForSeconds(time);
+        passosPlaying = null;
     }
 }

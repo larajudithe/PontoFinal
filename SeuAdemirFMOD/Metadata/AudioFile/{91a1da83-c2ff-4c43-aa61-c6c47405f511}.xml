@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{8f8f7825-cd1d-4017-9dfc-582040472f46}">
+	<object class="AudioFile" id="{91a1da83-c2ff-4c43-aa61-c6c47405f511}">
 		<property name="assetPath">
-			<value>Fundo/BG.wav</value>
+			<value>Extintor/Extintor1.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>94.493812500000004</value>
+			<value>10.1049375</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{dd89cf66-d682-401e-b3e5-66c5cbfca1ea}</destination>

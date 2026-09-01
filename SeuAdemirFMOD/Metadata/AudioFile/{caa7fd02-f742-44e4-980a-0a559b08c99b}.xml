@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="AudioFile" id="{caa7fd02-f742-44e4-980a-0a559b08c99b}">
 		<property name="assetPath">
-			<value>720691__theoctopus559__visible-sadness-both-piano-and-drums.wav</value>
+			<value>Fundo/Cutscene.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

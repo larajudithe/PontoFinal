@@ -50,6 +50,8 @@ public class Ignition : MonoBehaviour
             {
                 progressIgnitionImage.fillAmount += ativeProgress;
                 ativeTime -= ativeMaxTime;
+                ignitionSound.Stop();
+                ignitionSound.Play();
             }
         }
         if (startIgnition && interAction.WasReleasedThisFrame())

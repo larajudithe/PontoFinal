@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.03.00">
-	<object class="AudioFile" id="{8f8f7825-cd1d-4017-9dfc-582040472f46}">
+	<object class="AudioFile" id="{dc27879e-7605-4352-97c7-847984c2bd8f}">
 		<property name="assetPath">
-			<value>Fundo/BG.wav</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>Player/Passo3.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
 		</property>
 		<property name="channelCount">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
-			<value>94.493812500000004</value>
+			<value>0.47999999999999998</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{dd89cf66-d682-401e-b3e5-66c5cbfca1ea}</destination>
