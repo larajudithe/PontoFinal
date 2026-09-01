@@ -6,10 +6,11 @@ public class Extintor : MonoBehaviour
     public Transform player;
     Vector3 offset;
     bool seguir = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        offset = new Vector3(0.5f, 0f, -0.5f);
+        Debug.Log("seguir " + seguir);
+        offset = new Vector3(0.1f, -0.8f, 1f);
     }
 
     // Update is called once per frame
@@ -24,5 +25,11 @@ public class Extintor : MonoBehaviour
     {
         seguir = true;
         FireCloneScript.Ativar();
+        Debug.Log("Pegou o extintor");
+        Debug.Log("seguir " + seguir);
     }
+    // public void FinishPlayer()
+    // {
+    //     seguir = false;
+    // }
 }
