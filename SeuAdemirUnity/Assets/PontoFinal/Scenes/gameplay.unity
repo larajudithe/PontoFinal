@@ -24298,7 +24298,11 @@ MonoBehaviour:
   interativo: {fileID: 11400000, guid: ecba5035795932f4194b004bb12b8aa2, type: 2}
   intAnteriores:
   - itemRequirido:
-    - {fileID: 11400000, guid: 794befa8a3947fb42a8f43173010b94b, type: 2}
+    - {fileID: 11400000, guid: e387f36cdd039f14bbfc03d02b781cf5, type: 2}
+    - {fileID: 11400000, guid: 9073b4586f23fb94eb6b5831b37d0bae, type: 2}
+    - {fileID: 11400000, guid: 403b173b3a5c22344adc945debb8f152, type: 2}
+    - {fileID: 11400000, guid: 2260d86014957474d8cb9a15ac55c388, type: 2}
+    - {fileID: 11400000, guid: dd2741e3b9436d641ba3093aca315198, type: 2}
     interativoAtual: {fileID: 11400000, guid: 65e1074527c688148b5b3edf3eb81218, type: 2}
     OnInteractAtual:
       m_PersistentCalls:
