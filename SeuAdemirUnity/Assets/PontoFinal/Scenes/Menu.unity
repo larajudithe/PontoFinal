@@ -2245,6 +2245,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1215270513}
   m_CullTransparentMesh: 1
+--- !u!1 &1228512355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1800354870658748461, guid: 23355aa061f67eb4aa0871e3b214cc7b, type: 3}
+  m_PrefabInstance: {fileID: 6220276165398693118}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1228512360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1228512355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 784933054
+      Data2: 1088246000
+      Data3: -493381234
+      Data4: -1801723263
+    Path: event:/MenuClique
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1326257196
 GameObject:
   m_ObjectHideFlags: 0
@@ -7851,6 +7887,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520734032}
   m_CullTransparentMesh: 1
+--- !u!1 &1611769861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2561038004217338831, guid: a23968039c69eda4092ef9f9d687b7f3, type: 3}
+  m_PrefabInstance: {fileID: 5421139549388668102}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1611769866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611769861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 784933054
+      Data2: 1088246000
+      Data3: -493381234
+      Data4: -1801723263
+    Path: event:/MenuClique
+  Event: 
+  EventPlayTrigger: 19
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1646243625
 GameObject:
   m_ObjectHideFlags: 0
@@ -9048,7 +9120,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2561038004217338831, guid: a23968039c69eda4092ef9f9d687b7f3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1611769866}
   m_SourcePrefab: {fileID: 100100000, guid: a23968039c69eda4092ef9f9d687b7f3, type: 3}
 --- !u!1001 &6220276165398693118
 PrefabInstance:
@@ -9149,7 +9224,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1800354870658748461, guid: 23355aa061f67eb4aa0871e3b214cc7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1228512360}
   m_SourcePrefab: {fileID: 100100000, guid: 23355aa061f67eb4aa0871e3b214cc7b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
