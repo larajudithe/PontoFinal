@@ -33,10 +33,10 @@ public class FireClone : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            PlayerControllerScript.PerderVida();
-        }
+        // if (other.CompareTag("Player"))
+        // {
+        //     PlayerControllerScript.PerderVida();
+        // }
         if (other.CompareTag("Tiro"))
         {
             PerderFogo();
