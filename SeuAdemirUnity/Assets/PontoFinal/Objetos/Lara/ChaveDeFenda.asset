@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54efcab01d09c924e8fd76564c6faab8, type: 3}
   m_Name: ChaveDeFenda
   m_EditorClassIdentifier: Assembly-CSharp::Interativos
-  pegavel: 0
+  pegavel: 1
   carregavel: 0
   texto: coletou CHAVE DE FENDA
   audioEvent:
