@@ -108,14 +108,15 @@ public class PlayerInteractions : MonoBehaviour
             {
                 StopMovimentation.Invoke(); // Para a movimentação do jogador
             }
-            if(currentInteraction.GetInterativo().GetTexto()=="EXTINTOR")
-            {
-            if(currentInteraction.GetIntAnteriores(0).GetInterativoAtual().GetCarregavel())
-            {
-                ExtintorScript.FollowPlayer();
-                Debug.Log("Extintor pegavel");
-            }
-            }
+            // if(currentInteraction.GetInterativo().GetTexto()=="EXTINTOR")
+            // {
+            // if(currentInteraction.GetIntAnteriores(0).GetInterativoAtual().GetCarregavel())
+            // {
+            //     ExtintorScript.FollowPlayer();
+            //     Debug.Log("Extintor pegavel");
+            // }
+            // }
+            
         
             isInteracting = true; // Ativa a interação
             bool hasPreviousItem = false; // Existe interações anteriores

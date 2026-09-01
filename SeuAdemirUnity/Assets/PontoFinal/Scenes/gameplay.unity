@@ -8714,6 +8714,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8c7021062aa084db740d0128ab941b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tiro
+--- !u!54 &703364881
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703364875}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &712431240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24275,11 +24302,7 @@ MonoBehaviour:
   interativo: {fileID: 11400000, guid: ecba5035795932f4194b004bb12b8aa2, type: 2}
   intAnteriores:
   - itemRequirido:
-    - {fileID: 11400000, guid: e387f36cdd039f14bbfc03d02b781cf5, type: 2}
-    - {fileID: 11400000, guid: 9073b4586f23fb94eb6b5831b37d0bae, type: 2}
-    - {fileID: 11400000, guid: 403b173b3a5c22344adc945debb8f152, type: 2}
-    - {fileID: 11400000, guid: 2260d86014957474d8cb9a15ac55c388, type: 2}
-    - {fileID: 11400000, guid: dd2741e3b9436d641ba3093aca315198, type: 2}
+    - {fileID: 11400000, guid: 794befa8a3947fb42a8f43173010b94b, type: 2}
     interativoAtual: {fileID: 11400000, guid: 65e1074527c688148b5b3edf3eb81218, type: 2}
     OnInteractAtual:
       m_PersistentCalls:
@@ -24289,7 +24312,19 @@ MonoBehaviour:
       m_Calls: []
   OnCollectObjeto:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1391411620}
+        m_TargetAssemblyTypeName: Extintor, Assembly-CSharp
+        m_MethodName: StartFollow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   movimentationSpeed: 5
   movimentationTime: 1
 --- !u!114 &1391411620
@@ -26729,6 +26764,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1391411610}
     m_Modifications:
+    - target: {fileID: 5768486238876921269, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
       propertyPath: m_Name
       value: Tiro
@@ -26776,7 +26815,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 703364881}
   m_SourcePrefab: {fileID: 100100000, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
 --- !u!1001 &1746430828
 PrefabInstance:
@@ -29077,7 +29119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1967311871
 Transform:
   m_ObjectHideFlags: 0
@@ -30926,9 +30968,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1465418916240329465, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: m_Size.x
+      value: 1.2896335
       objectReference: {fileID: 0}
+    - target: {fileID: 1465418916240329465, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_Size.y
+      value: 1.031809
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465418916240329465, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_Size.z
+      value: 2.5274508
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465418916240329465, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_Center.x
+      value: -0.018805861
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465418916240329465, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_Center.y
+      value: -0.20630908
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465418916240329465, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_Center.z
+      value: 0.9409738
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465418916240329465, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2255737366983612434, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: Puzzle
+      value: 
+      objectReference: {fileID: 1967311870}
     - target: {fileID: 2255737366983612434, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
       propertyPath: PlayerControllerScript
       value: 
@@ -30988,6 +31058,10 @@ PrefabInstance:
     - target: {fileID: 5928318878679973607, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
       propertyPath: m_Name
       value: Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928318878679973607, guid: 81571978b1feb404aaa742c6c12d85c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -20,16 +20,11 @@ public class Extintor : MonoBehaviour
         {
         transform.position = player.transform.position + offset;
         }
+
     }
-    public void FollowPlayer()
+    public void StartFollow()
     {
-        seguir = true;
         FireCloneScript.Ativar();
-        Debug.Log("Pegou o extintor");
-        Debug.Log("seguir " + seguir);
+        seguir = true;
     }
-    // public void FinishPlayer()
-    // {
-    //     seguir = false;
-    // }
 }
