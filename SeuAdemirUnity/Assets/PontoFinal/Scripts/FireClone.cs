@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FireClone : MonoBehaviour
 {
-    float posicaoz = 1f;
+    [SerializeField] float posicaoz;
     public GameObject originalObject;
     public Transform Fire;
     public Transform Fire2;
@@ -12,7 +12,10 @@ public class FireClone : MonoBehaviour
     GameObject clone;
     GameObject clone2;
     [SerializeField] private GameObject Puzzle;
-    int fogo = 7;
+    [SerializeField] float SomaPosicaoZ;
+    [SerializeField] int SomaFogo;
+    [SerializeField] int DiminuirFogo;
+    [SerializeField] int fogo;
 
     void Start()
     {
@@ -26,18 +29,14 @@ public class FireClone : MonoBehaviour
     }
     IEnumerator ClonarFogo()
     {
-        posicaoz += 0.7f;
+        posicaoz = posicaoz + SomaPosicaoZ;
         yield return new WaitForSeconds(15f);
         clone = Instantiate(originalObject, Fire.position - offset, originalObject.transform.rotation);
         clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
-        fogo += 7;
+        fogo = fogo + SomaFogo;
     }
     private void OnTriggerEnter(Collider other)
     {
-        // if (other.CompareTag("Player"))
-        // {
-        //     PlayerControllerScript.PerderVida();
-        // }
         if (other.CompareTag("Tiro"))
         {
             PerderFogo();
@@ -46,7 +45,7 @@ public class FireClone : MonoBehaviour
     public void PerderFogo()
     {
         Debug.Log("fogo: " + fogo);
-        fogo -= 1;
+        fogo = fogo - DiminuirFogo;
         if (fogo == 0)
         {
             Destroy(clone);
