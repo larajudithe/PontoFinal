@@ -26,9 +26,10 @@ public class FireClone : MonoBehaviour
     IEnumerator ClonarFogo()
     {
         posicaoz += 1;
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(20f);
         clone = Instantiate(originalObject, Fire.position - offset, originalObject.transform.rotation);
         clone2 = Instantiate(originalObject, Fire2.position - offset, originalObject.transform.rotation);
+        fogo += 7;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -36,12 +37,16 @@ public class FireClone : MonoBehaviour
         {
             PlayerControllerScript.PerderVida();
         }
+        if (other.CompareTag("Tiro"))
+        {
+            PerderFogo();
+        }
     }
     public void PerderFogo()
     {
         Debug.Log("fogo: " + fogo);
         fogo -= 1;
-        if (fogo <= 0)
+        if (fogo == 0)
         {
             Destroy(clone);
             Destroy(clone2);
