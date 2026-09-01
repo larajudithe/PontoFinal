@@ -7,6 +7,7 @@ public class SceneMenager : MonoBehaviour
 {
     [SerializeField] private string sceneMenu; // Nome da cena a ser carregada
     [SerializeField] private GameObject painelOPC;
+        [SerializeField] private GameObject painelNarrativa;
     [SerializeField] private GameObject painelMENU;
     public static SceneMenager Instance { get; private set; }
     public void LoadMenu()
@@ -25,6 +26,18 @@ public class SceneMenager : MonoBehaviour
     {
         painelMENU.SetActive(true);
         painelOPC.SetActive(false);
+    }
+
+     public void AbrirNarrativa()
+    {
+        painelMENU.SetActive(false);
+        painelNarrativa.SetActive(true);
+    }
+
+    public void FecharNarrativa()
+    {
+        painelMENU.SetActive(true);
+        painelNarrativa.SetActive(false);
     }
     public void Play()
     {
