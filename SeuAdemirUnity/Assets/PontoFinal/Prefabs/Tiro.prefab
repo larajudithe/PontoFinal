@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3511845041093741841}
   m_Layer: 0
   m_Name: Tiro
-  m_TagString: Untagged
+  m_TagString: Tiro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4871,4 +4871,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8c7021062aa084db740d0128ab941b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tiro
-  FireCloneScript: {fileID: 0}
