@@ -21,6 +21,8 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private Transform pontoDeSpawn;  
 
     [SerializeField] private EventReference somEncaixadp;
+  //  [SerializeField] private GameObject AFichaOnibus; 
+
 
     public UnityEvent parardeGirar;
 
@@ -76,11 +78,12 @@ public class PuzzleManager : MonoBehaviour
     if (objetoInterativo != null)
     {
         objetoInterativo.OnCollectObjeto.Invoke();
+      // AFichaOnibus.SetActive(true);
     }
 
     if (prefabFicha != null && pontoDeSpawn != null)
     {
-    Instantiate(prefabFicha, pontoDeSpawn.position, pontoDeSpawn.rotation);
+  Instantiate(prefabFicha, pontoDeSpawn.position, pontoDeSpawn.rotation);
      }
      
      //GetComponent<Collider>().enabled = false;
