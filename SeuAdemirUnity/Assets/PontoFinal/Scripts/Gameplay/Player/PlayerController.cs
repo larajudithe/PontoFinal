@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviour
     public Transform Extintor;
     GameObject clone;
 
-    int vida = 5;
-
     void Awake()
     {
         // Define as ações de input
