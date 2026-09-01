@@ -1038,11 +1038,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1625955175
-      Data2: 1108965929
-      Data3: -677694547
-      Data4: 68181937
-    Path: event:/MusicaMneu
+      Data1: -2140373361
+      Data2: 1304956701
+      Data3: 2095703999
+      Data4: -835022494
+    Path: event:/Cutscene
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
