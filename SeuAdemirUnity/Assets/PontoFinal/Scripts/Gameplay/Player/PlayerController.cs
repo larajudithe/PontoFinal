@@ -32,9 +32,6 @@ public class PlayerController : MonoBehaviour
     public GameObject TiroObject;
     public Transform Extintor;
     GameObject clone;
-    [SerializeField] Tiro TiroScript;
-
-    int vida = 5;
 
     void Awake()
     {
@@ -98,11 +95,6 @@ public class PlayerController : MonoBehaviour
         finalDirection = forwardDirection + strafeDirection + verticalDirection; // Soma os movimentos
         characterController.Move(finalDirection * Time.deltaTime); // Move o personagem
     }
-    // public void PerderVida()
-    // {
-    //     vida -= 1;
-    //     Debug.Log("Vida: " + vida);
-    // }
 
     private void OnHoldPerformed(InputAction.CallbackContext context)
     {
