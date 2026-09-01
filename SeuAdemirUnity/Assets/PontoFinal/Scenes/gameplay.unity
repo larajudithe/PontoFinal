@@ -146,15 +146,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6017979797711021170, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.1008
+      value: -11.0801
       objectReference: {fileID: 0}
     - target: {fileID: 6017979797711021170, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8261
+      value: 1.834
       objectReference: {fileID: 0}
     - target: {fileID: 6017979797711021170, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.5985
+      value: -2.5915
       objectReference: {fileID: 0}
     - target: {fileID: 6017979797711021170, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3313,18 +3313,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1457539190}
-        m_TargetAssemblyTypeName: ControleCursor, Assembly-CSharp
-        m_MethodName: BloquearMouse
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 608376315}
         m_TargetAssemblyTypeName: ObjectInterativo, Assembly-CSharp
         m_MethodName: set_enabled
@@ -3336,6 +3324,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 968968082}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 727251300}
+        m_TargetAssemblyTypeName: PlayerInteractions, Assembly-CSharp
+        m_MethodName: FinishInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   movimentationSpeed: 5
   movimentationTime: 1
@@ -16124,6 +16136,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8563059344794620636, guid: 58ae28da851cdc24281adb4fc72de8a1, type: 3}
   m_PrefabInstance: {fileID: 699789866}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &968968082 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6399606348869975752, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
+  m_PrefabInstance: {fileID: 36809034}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &979108016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a32d335d8ba2ca84f980bc6911d95364, type: 3}
@@ -24933,7 +24950,7 @@ MonoBehaviour:
   proximoQuebraCabeca: {fileID: 659203996}
   canvasPrincipal: {fileID: 1187592498}
   objetoInterativo: {fileID: 608376315}
-  prefabFicha: {fileID: 6399606348869975752, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
+  prefabFicha: {fileID: 968968082}
   pontoDeSpawn: {fileID: 679851011}
   somEncaixadp:
     Guid:
@@ -29754,6 +29771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneMenager
   sceneMenu: Menu
   painelOPC: {fileID: 0}
+  painelNarrativa: {fileID: 0}
   painelMENU: {fileID: 0}
 --- !u!4 &2020984180
 Transform:
