@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{a61830f2-f0a5-4f8b-a1ee-0dad35a064b6}">
+		<property name="assetPath">
+			<value>Chapa/Fios1.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.032</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{dd89cf66-d682-401e-b3e5-66c5cbfca1ea}</destination>
+		</relationship>
+	</object>
+</objects>
