@@ -7,6 +7,9 @@ public class PuzzleManager : MonoBehaviour
 {
     [Header("Configuracoes")]
     [SerializeField] private int pontosTotais = 0;
+    [SerializeField] private int pontosFase1 = 4;
+        [SerializeField] private int pontosFase2 = 7;
+
     
     [Header("Telas / Canvases")]
     [SerializeField] private GameObject canvasAtual; 
@@ -20,6 +23,7 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField] private GameObject prefabFicha; 
     [SerializeField] private Transform pontoDeSpawn;  
 
+    [Header("Configuracoes")]
     [SerializeField] private EventReference somEncaixadp;
   //  [SerializeField] private GameObject AFichaOnibus; 
 
@@ -34,12 +38,12 @@ public class PuzzleManager : MonoBehaviour
        // Debug.Log("Pontos atuais: " + pontosTotais);
 
         // quando fizer 4 pontos, muda para o proximo quebra-cabeca
-        if (pontosTotais == 4)
+        if (pontosTotais == pontosFase1) 
         {
             MudarParaProximoQuebraCabeca();
         }
         // quando fizer 7 pontos, fecha o canvas/jogo
-        else if (pontosTotais >= 7)
+        else if (pontosTotais >= pontosFase2) 
         {
             parardeGirar.Invoke();
             FecharCanvas();

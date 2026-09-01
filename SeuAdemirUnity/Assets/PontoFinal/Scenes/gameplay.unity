@@ -24781,6 +24781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PuzzleManager
   pontosTotais: 0
+  pontosFase1: 4
+  pontosFase2: 7
   canvasAtual: {fileID: 1095601571}
   proximoQuebraCabeca: {fileID: 659203996}
   canvasPrincipal: {fileID: 1187592498}

@@ -45,7 +45,7 @@ public class DragDrop : MonoBehaviour
         if (isLocked || objectToDrag == null || canvas == null) return;
 
         // pega a posição do ponteiro em pixels da tela
-        Vector2 mouseScreenPosition = Pointer.current.position.ReadValue();
+        Vector2 mouseScreenPosition = Pointer.current.position.ReadValue(); //MUDAR PARA INPUT MANAGER 
 
         // converte a posição da tela para a posição exata dentro do canvas
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
