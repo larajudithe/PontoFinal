@@ -113,6 +113,7 @@ public class DragDrop : MonoBehaviour
             objectToDrag.rotation = objectDragToPos.rotation;
             objectToDrag.localScale = objectDragToPos.localScale;
 
+
             if (puzzleManager != null)
             {
                 puzzleManager.AdicionarPonto();
