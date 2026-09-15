@@ -111,11 +111,11 @@ public class PlayerController : MonoBehaviour
         }
         if(actionExtintor.IsPressed())
         {
-            extintorSound.Play();
+            // extintorSound.Play();
             TiroObject.SetActive(true);
         }else
         {
-            extintorSound.Stop();
+            // extintorSound.Stop();
             TiroObject.SetActive(false);
         }
 

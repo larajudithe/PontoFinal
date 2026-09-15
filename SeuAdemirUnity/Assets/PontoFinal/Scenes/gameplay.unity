@@ -24792,6 +24792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
   FireCloneScript: {fileID: 353106447}
+  ExtintorButton: {fileID: 0}
   player: {fileID: 36062382}
 --- !u!64 &1391411623
 MeshCollider:
@@ -30009,7 +30010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1967311871
 Transform:
   m_ObjectHideFlags: 0
@@ -31133,6 +31134,10 @@ PrefabInstance:
     - target: {fileID: 4869392441591477769, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 3.0216064
+      objectReference: {fileID: 0}
+    - target: {fileID: 5027832469726375848, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5038956906591223710, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_Pivot.x

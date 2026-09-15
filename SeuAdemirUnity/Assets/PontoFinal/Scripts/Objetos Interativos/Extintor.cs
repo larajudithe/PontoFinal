@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Extintor : MonoBehaviour
 {
     [SerializeField] FireClone FireCloneScript;
-    [SerializeField] GameObject ExtintorButton;
+    // [SerializeField] GameObject ExtintorButton;
     public Transform player;
     Vector3 offset;
     bool seguir = false;
@@ -28,6 +28,6 @@ public class Extintor : MonoBehaviour
     {
         FireCloneScript.Ativar();
         seguir = true;
-        ExtintorButton.SetActive(true);
+        // ExtintorButton.SetActive(true);
     }
 }
