@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Input Actions")]
     [SerializeField] private InputActionAsset inputActions; // InputMap
-    [SerializeField] private StudioEventEmitter extintorSound;
     private InputAction actionMove; // Ação move (x e y 0,1)
     private InputAction actionJump; // Ação Jump
     private InputAction actionExtintor; // Atira com o extintor
