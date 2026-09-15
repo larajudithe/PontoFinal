@@ -5,6 +5,13 @@ public class ControleCursor : MonoBehaviour
     private bool mouseLiberado = false;
     private bool mouseBloqueado = false;
 
+    private void Awake()
+    {
+        // Já começa bloqueado e invisível instantaneamente ao abrir a cena
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
 
     void Update()
     {

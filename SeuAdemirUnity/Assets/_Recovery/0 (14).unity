@@ -571,8 +571,8 @@ MonoBehaviour:
   objectDragToPos: {fileID: 1268434086}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 30
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  pointerPositionAction: {fileID: 0}
+  clickAction: {fileID: 0}
 --- !u!114 &163791127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,8 +1371,8 @@ MonoBehaviour:
   objectDragToPos: {fileID: 926267646}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 30
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  pointerPositionAction: {fileID: 0}
+  clickAction: {fileID: 0}
 --- !u!114 &321643146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1790,8 +1790,8 @@ MonoBehaviour:
   objectDragToPos: {fileID: 988634749}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 30
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  pointerPositionAction: {fileID: 0}
+  clickAction: {fileID: 0}
 --- !u!114 &341905626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30779,10 +30779,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2287135369792807266, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.000030517578
-      objectReference: {fileID: 0}
-    - target: {fileID: 2287135369792807266, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.00022125244
       objectReference: {fileID: 0}
@@ -30925,10 +30921,6 @@ PrefabInstance:
     - target: {fileID: 3577626519510380771, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3592051750371071596, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.001159668
       objectReference: {fileID: 0}
     - target: {fileID: 3848102744373904053, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchorMax.x
