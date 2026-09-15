@@ -34,6 +34,7 @@ public class PlayerInteractions : MonoBehaviour
     private Camera myCamera; // Camera
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] Extintor ExtintorScript;
+    [SerializeField] GameObject androidButtons;
 
 
     private bool isInteracting = false;
@@ -173,17 +174,23 @@ public class PlayerInteractions : MonoBehaviour
             UIManager.Instance.SetCaptions("");
         }else
         {
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                androidButtons.SetActive(false);
+            }
             UIManager.Instance.SetCaptions("");
             Debug.Log("Puzzle");
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            //Debug.Log(Cursor.visible);
-            //Debug.Log(Cursor.lockState);
             return;
         }
     }
     public void FinishInteraction() // Termina a interação
     {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            androidButtons.SetActive(true);
+        }
         //Debug.Log("Finalizou interação");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -210,5 +217,4 @@ public class PlayerInteractions : MonoBehaviour
         currentInteraction.transform.Rotate(myCamera.transform.right, -Mathf.Deg2Rad * rotateLook.y * rotationSpeed, Space.World);
         currentInteraction.transform.Rotate(myCamera.transform.up, -Mathf.Deg2Rad * rotateLook.x * rotationSpeed, Space.World);
     }
-
 }
