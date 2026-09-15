@@ -2375,6 +2375,108 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a23968039c69eda4092ef9f9d687b7f3, type: 3}
+--- !u!1 &513911502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513911503}
+  - component: {fileID: 513911506}
+  - component: {fileID: 513911505}
+  - component: {fileID: 513911504}
+  - component: {fileID: 513911507}
+  m_Layer: 5
+  m_Name: ExtintorButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &513911503
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513911502}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1636276311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 856, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &513911504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513911502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &513911505
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513911502}
+  m_CullTransparentMesh: 1
+--- !u!114 &513911506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513911502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1857af8c0acc8408b60c5eb8de1e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffAndroid
+--- !u!114 &513911507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513911502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenButton
+  m_ControlPath: <Keyboard>/enter
 --- !u!1001 &528055534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24746,6 +24848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
   FireCloneScript: {fileID: 353106447}
+  ExtintorButton: {fileID: 513911502}
   player: {fileID: 36062382}
 --- !u!64 &1391411623
 MeshCollider:
@@ -26756,6 +26859,7 @@ RectTransform:
   - {fileID: 1566971879}
   - {fileID: 1275911213}
   - {fileID: 833657361}
+  - {fileID: 513911503}
   m_Father: {fileID: 2089889275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -30779,7 +30883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287135369792807266, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00022125244
+      value: -0.00021362305
       objectReference: {fileID: 0}
     - target: {fileID: 2317194510511502572, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
@@ -30924,6 +31028,10 @@ PrefabInstance:
     - target: {fileID: 3592051750371071596, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.001159668
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592051750371071596, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00064086914
       objectReference: {fileID: 0}
     - target: {fileID: 3848102744373904053, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchorMax.x
@@ -31315,7 +31423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379539353712265006, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0062942505
+      value: -0.006286621
       objectReference: {fileID: 0}
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_LocalScale.x
