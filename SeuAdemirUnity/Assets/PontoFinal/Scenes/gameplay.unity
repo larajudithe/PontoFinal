@@ -147,20 +147,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47924973}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1683061799}
   - {fileID: 1899902718}
   - {fileID: 1899620015}
   - {fileID: 1332337309}
-  m_Father: {fileID: 2046074658}
+  m_Father: {fileID: 1095601572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 475.99973, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &64394129 stripped
@@ -569,10 +569,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 163791124}
   objectDragToPos: {fileID: 1268434086}
+  dragCanvasGroup: {fileID: 0}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 30
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fadeEnquantoArrasta: 0
 --- !u!114 &163791127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,20 +639,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 193703794}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1405052871}
   - {fileID: 1012964385}
   - {fileID: 1013570703}
   - {fileID: 2110528946}
-  m_Father: {fileID: 2046074658}
+  m_Father: {fileID: 1095601572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0}
+  m_AnchoredPosition: {x: 476.00024, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &203986170 stripped
@@ -1369,10 +1369,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 321643143}
   objectDragToPos: {fileID: 926267646}
+  dragCanvasGroup: {fileID: 0}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 30
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fadeEnquantoArrasta: 0
 --- !u!114 &321643146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1788,10 +1788,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 341905623}
   objectDragToPos: {fileID: 988634749}
+  dragCanvasGroup: {fileID: 0}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 30
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fadeEnquantoArrasta: 0
 --- !u!114 &341905626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9302,8 +9302,8 @@ Transform:
   m_GameObject: {fileID: 758002097}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 67.200005, y: 8.799975, z: 0}
-  m_LocalScale: {x: 400, y: 400, z: 80}
+  m_LocalPosition: {x: -7.8274, y: -6.9952, z: 0}
+  m_LocalScale: {x: 269.46246, y: 145.52905, z: 80}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1095601572}
@@ -9797,6 +9797,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58ae28da851cdc24281adb4fc72de8a1, type: 3}
+--- !u!1 &811386166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8591991586168714783, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+  m_PrefabInstance: {fileID: 2089889274}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &811386168
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811386166}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &816280235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8563059344794620636, guid: 58ae28da851cdc24281adb4fc72de8a1, type: 3}
@@ -17253,6 +17270,8 @@ RectTransform:
   m_Children:
   - {fileID: 758002098}
   - {fileID: 2046074658}
+  - {fileID: 193703795}
+  - {fileID: 47924974}
   m_Father: {fileID: 1187592499}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -24115,9 +24134,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: -25.5}
+  m_AnchoredPosition: {x: -86.62063, y: -34.517097}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.75006735, y: 0.12788805}
 --- !u!114 &1332337310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24215,10 +24234,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 1332337309}
   objectDragToPos: {fileID: 2110528946}
+  dragCanvasGroup: {fileID: 0}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 50
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fadeEnquantoArrasta: 0
 --- !u!1001 &1347088497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27142,11 +27161,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 47924974}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149.2, y: 30}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -104.8, y: -12.5}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1683061800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27244,10 +27263,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 1683061799}
   objectDragToPos: {fileID: 1405052871}
+  dragCanvasGroup: {fileID: 0}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 50
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fadeEnquantoArrasta: 0
 --- !u!1 &1685176168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2317194510511502572, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
@@ -28982,7 +29001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.9, y: 0.0000014305115}
+  m_AnchoredPosition: {x: -140.2, y: 0.0000014305115}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1899620016
@@ -29082,10 +29101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 1899620015}
   objectDragToPos: {fileID: 1013570703}
+  dragCanvasGroup: {fileID: 0}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 50
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fadeEnquantoArrasta: 0
 --- !u!1 &1899902717
 GameObject:
   m_ObjectHideFlags: 0
@@ -29122,9 +29141,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98.200005, y: 13.3}
+  m_AnchoredPosition: {x: -93.1, y: 14.2}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1899902719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29222,10 +29241,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DragDrop
   objectToDrag: {fileID: 1899902718}
   objectDragToPos: {fileID: 1012964385}
+  dragCanvasGroup: {fileID: 0}
   puzzleManager: {fileID: 1457539192}
   dropDistance: 50
-  pointerPositionAction: {fileID: 2075845052294403216, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  clickAction: {fileID: 8122122155582494349, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  fadeEnquantoArrasta: 0
 --- !u!1 &1902904773
 GameObject:
   m_ObjectHideFlags: 0
@@ -29956,7 +29975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1967311871
 Transform:
   m_ObjectHideFlags: 0
@@ -30167,9 +30186,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 193703795}
-  - {fileID: 47924974}
+  m_Children: []
   m_Father: {fileID: 1095601572}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -30699,6 +30716,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 546819523169610367, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dropDistance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 546819523169610367, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: puzzleManager
+      value: 
+      objectReference: {fileID: 1457539192}
+    - target: {fileID: 546819523169610367, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dragCanvasGroup
+      value: 
+      objectReference: {fileID: 811386168}
+    - target: {fileID: 546819523169610367, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: fadeEnquantoArrasta
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 715423496368649248, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -30737,7 +30770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2287135369792807266, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00022125244
+      value: -0.00021362305
       objectReference: {fileID: 0}
     - target: {fileID: 2317194510511502572, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
@@ -30787,6 +30820,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2896539776777809577, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.028564453
+      objectReference: {fileID: 0}
     - target: {fileID: 2957507298416096129, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -30835,6 +30872,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3510616219971135464, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dropDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3510616219971135464, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: puzzleManager
+      value: 
+      objectReference: {fileID: 1457539192}
+    - target: {fileID: 3510616219971135464, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dragCanvasGroup
+      value: 
+      objectReference: {fileID: 811386168}
     - target: {fileID: 3577626519510380771, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.61666703
@@ -30882,6 +30931,10 @@ PrefabInstance:
     - target: {fileID: 3592051750371071596, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.001159668
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592051750371071596, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00064086914
       objectReference: {fileID: 0}
     - target: {fileID: 3848102744373904053, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchorMax.x
@@ -30935,6 +30988,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: d24c67e9ee85e3d4c95fc12de5ebda03, type: 3}
+    - target: {fileID: 4213515929379791093, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dropDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4213515929379791093, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: puzzleManager
+      value: 
+      objectReference: {fileID: 1457539192}
+    - target: {fileID: 4213515929379791093, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dragCanvasGroup
+      value: 
+      objectReference: {fileID: 811386168}
     - target: {fileID: 4484072079172226796, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -31022,6 +31087,18 @@ PrefabInstance:
     - target: {fileID: 4643844045153721990, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724799343972771341, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869392441591477769, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -10.708252
+      objectReference: {fileID: 0}
+    - target: {fileID: 4869392441591477769, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.0216064
       objectReference: {fileID: 0}
     - target: {fileID: 5038956906591223710, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_Pivot.x
@@ -31197,7 +31274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5758577528394854502, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1
+      value: -0.9998779
       objectReference: {fileID: 0}
     - target: {fileID: 5758577528394854502, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -31261,7 +31338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6379539353712265006, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0062942505
+      value: -0.006286621
       objectReference: {fileID: 0}
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_LocalScale.x
@@ -31278,6 +31355,10 @@ PrefabInstance:
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.23449707
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.47973633
       objectReference: {fileID: 0}
     - target: {fileID: 6727443618999540597, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -31479,6 +31560,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8409535737381348001, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8503678650326315480, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -3.210205
@@ -31531,6 +31616,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9179990819212961689, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dropDistance
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9179990819212961689, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: puzzleManager
+      value: 
+      objectReference: {fileID: 1457539192}
+    - target: {fileID: 9179990819212961689, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: dragCanvasGroup
+      value: 
+      objectReference: {fileID: 811386168}
     - target: {fileID: 9219411117447239507, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.989
@@ -31605,6 +31702,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8995214094387811342, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1633894409}
+    - targetCorrespondingSourceObject: {fileID: 8591991586168714783, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 811386168}
   m_SourcePrefab: {fileID: 100100000, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
 --- !u!224 &2089889275 stripped
 RectTransform:
