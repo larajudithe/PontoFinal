@@ -21,7 +21,6 @@ public class DragDrop : MonoBehaviour
     private bool isDragging;
 
     void Start()
-    {void Start()
     {
         // encontra o canvas pai automaticamente
         canvas = GetComponentInParent<Canvas>();
@@ -44,7 +43,6 @@ public class DragDrop : MonoBehaviour
             objectInitAnchoredPos = objectToDrag.anchoredPosition;
         }
 
-    }
     }
 
     void OnEnable()

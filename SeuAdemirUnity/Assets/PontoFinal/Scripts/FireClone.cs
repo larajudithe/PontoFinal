@@ -12,10 +12,10 @@ public class FireClone : MonoBehaviour
     GameObject clone;
     GameObject clone2;
     [SerializeField] private GameObject Puzzle;
-    [SerializeField] float SomaPosicaoZ;
-    [SerializeField] int SomaFogo;
-    [SerializeField] int DiminuirFogo;
-    [SerializeField] int fogo;
+    [SerializeField] float SomaPosicaoZ = 1f;
+    [SerializeField] int SomaFogo = 7;
+    [SerializeField] int DiminuirFogo = 1;
+    [SerializeField] int fogo = 7;
 
     void Start()
     {

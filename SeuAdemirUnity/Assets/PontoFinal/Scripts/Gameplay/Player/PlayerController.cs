@@ -51,18 +51,18 @@ public class PlayerController : MonoBehaviour
         actionJump = InputSystem.actions.FindAction("jump");
         actionExtintor = InputSystem.actions.FindAction("Extintor");
     }
-    private void OnEnable()
-    {
-        // Triggers once when the hold duration threshold is met
-        actionExtintor.performed += OnHoldPerformed;
-        // Triggers when the player finally lets go of the button
-        actionExtintor.canceled += OnHoldCanceled;
-    }
-    private void OnDisable()
-    {
-        actionExtintor.performed -= OnHoldPerformed;
-        actionExtintor.canceled -= OnHoldCanceled;
-    }
+    // private void OnEnable()
+    // {
+    //     // Triggers once when the hold duration threshold is met
+    //     actionExtintor.performed += OnHoldPerformed;
+    //     // Triggers when the player finally lets go of the button
+    //     actionExtintor.canceled += OnHoldCanceled;
+    // }
+    // private void OnDisable()
+    // {
+    //     actionExtintor.performed -= OnHoldPerformed;
+    //     actionExtintor.canceled -= OnHoldCanceled;
+    // }
 
 
     void Start()
@@ -110,22 +110,31 @@ public class PlayerController : MonoBehaviour
         {
             verticalDirection = Vector3.zero;
         }
+        if(actionExtintor.IsPressed())
+        {
+            extintorSound.Play();
+            TiroObject.SetActive(true);
+        }else
+        {
+            extintorSound.Stop();
+            TiroObject.SetActive(false);
+        }
 
         finalDirection = forwardDirection + strafeDirection + verticalDirection; // Soma os movimentos
         characterController.Move(finalDirection * Time.deltaTime); // Move o personagem
     }
 
-    private void OnHoldPerformed(InputAction.CallbackContext context)
-    {
-        extintorSound.Play();
-        TiroObject.SetActive(true);
-    }
+    // private void OnHoldPerformed(InputAction.CallbackContext context)
+    // {
+    //     extintorSound.Play();
+    //     TiroObject.SetActive(true);
+    // }
 
-    private void OnHoldCanceled(InputAction.CallbackContext context)
-    {
-        extintorSound.Stop();
-        TiroObject.SetActive(false);
-    }
+    // private void OnHoldCanceled(InputAction.CallbackContext context)
+    // {
+    //     extintorSound.Stop();
+    //     TiroObject.SetActive(false);
+    // }
     private IEnumerator PlayPassos(float time)
     {
         passosSound.Play();

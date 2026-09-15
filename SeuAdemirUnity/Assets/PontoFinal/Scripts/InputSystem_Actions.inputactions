@@ -116,9 +116,9 @@
                 },
                 {
                     "name": "Extintor",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "e8fc78fd-84ae-466f-9fb3-6136f2615570",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
