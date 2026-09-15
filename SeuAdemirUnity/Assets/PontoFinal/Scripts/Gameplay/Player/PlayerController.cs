@@ -34,15 +34,15 @@ public class PlayerController : MonoBehaviour
     public GameObject TiroObject;
     public Transform Extintor;
     GameObject clone;
-<<<<<<< Updated upstream
-=======
-    [SerializeField] Tiro TiroScript;
     [SerializeField] private float timePassos;
     private StudioEventEmitter passosSound;
     private Coroutine passosPlaying;
+/*<<<<<<< Updated upstream
+=======
+    /*[SerializeField] Tiro TiroScript;
 
     int vida = 5;
->>>>>>> Stashed changes
+>>>>>>> Stashed changes*/
 
     void Awake()
     {
