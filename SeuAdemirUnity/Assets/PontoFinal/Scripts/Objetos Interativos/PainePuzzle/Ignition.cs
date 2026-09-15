@@ -69,7 +69,7 @@ public class Ignition : MonoBehaviour
     }
     public void StartIgnition()
     {
-        //Debug.Log("Start Ignition");
+        Debug.Log("Start Ignition");
         startIgnition = true;
         progressIgnitionImage.fillAmount = 0f;
         progressIgnition.SetActive(true);
