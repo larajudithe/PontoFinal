@@ -2,129 +2,118 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using FMODUnity;
 
+
 public class DragDrop : MonoBehaviour
 {
-    [Header("referencias")]
+    [Header("Referências")]
     [SerializeField] private RectTransform objectToDrag;
     [SerializeField] private RectTransform objectDragToPos;
-    [SerializeField] private PuzzleManager puzzleManager; 
-    [Header("configuracoes")]
-    [SerializeField] private float dropDistance = 30f;
-    [Header("input system")]
-    [SerializeField] private InputActionReference pointerPositionAction; 
-    [SerializeField] private InputActionReference clickAction; 
+    [SerializeField] private CanvasGroup dragCanvasGroup; // deixe VAZIO ou use um CanvasGroup na propria peca, nunca o do pai
+    [SerializeField] private PuzzleManager puzzleManager;
+
+    [Header("Configurações")]
+    [SerializeField] private float dropDistance = 30f; // em pixels de tela
+    [SerializeField] private bool fadeEnquantoArrasta = false;
 
     private Canvas canvas;
-    private Camera mainCamera;
+    private Camera uiCamera;
+    private RectTransform dragParent;
     private Vector2 objectInitAnchoredPos;
-    private bool isLocked;
+    private Vector2 grabOffset;
     private bool isDragging;
+    private bool isLocked;
+
+    private InputAction mousePointer;
+
+
+    void Awake()
+    {
+        mousePointer = InputSystem.actions.FindAction("position");
+    }
+
 
     void Start()
     {
-        // encontra o canvas pai automaticamente
         canvas = GetComponentInParent<Canvas>();
-        
+
         if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
         {
-            mainCamera = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
-        }
-
-        // Se você esqueceu de arrastar ou se o Unity bugou a referência, 
-        // ele pega o RectTransform deste próprio objeto automaticamente!
-        if (objectToDrag == null)
-        {
-            objectToDrag = GetComponent<RectTransform>();
+            uiCamera = canvas.worldCamera != null ? canvas.worldCamera : Camera.main;
         }
 
         if (objectToDrag != null)
         {
-            // salva a posicao inicial ancorada
+            dragParent = objectToDrag.parent as RectTransform;
             objectInitAnchoredPos = objectToDrag.anchoredPosition;
         }
 
-    }
-
-    void OnEnable()
-    {
-        // ativa e escuta os inputs do mapa de acoes
-        if (pointerPositionAction != null) pointerPositionAction.action.Enable();
-        if (clickAction != null)
+        if (mousePointer == null)
         {
-            clickAction.action.Enable();
-            clickAction.action.performed += OnClickPerformed;
-            clickAction.action.canceled += OnClickCanceled;
+            Debug.LogError("DragDrop: action 'position' não encontrada no Input Actions.", this);
         }
     }
 
-    void OnDisable()
-    {
-        // desativa para evitar vazamento de memoria ou erros
-        if (pointerPositionAction != null) pointerPositionAction.action.Disable();
-        if (clickAction != null)
-        {
-            clickAction.action.Disable();
-            clickAction.action.performed -= OnClickPerformed;
-            clickAction.action.canceled -= OnClickCanceled;
-        }
-    }
 
-    private void OnClickPerformed(InputAction.CallbackContext context)
+    // Opcional: ligue no Pointer Down. Se não ligar, o DragObject se vira sozinho.
+    public void BeginDrag()
     {
-        // aqui voce pode checar se clicou em cima do objeto antes de comecar a arrastar
+        if (isLocked || objectToDrag == null || dragParent == null) return;
+        if (!TryGetLocalPoint(out Vector2 localPoint)) return;
+
+        grabOffset = objectToDrag.anchoredPosition - localPoint;
         isDragging = true;
-    }
 
-    private void OnClickCanceled(InputAction.CallbackContext context)
-    {
-        if (isDragging)
+        if (fadeEnquantoArrasta && dragCanvasGroup != null)
         {
-            isDragging = false;
-            DropObjects();
+            dragCanvasGroup.alpha = 0.6f;
+            dragCanvasGroup.blocksRaycasts = false;
         }
     }
 
-    void Update()
-    {
-        if (isDragging)
-        {
-            DragObject();
-        }
-    }
 
+    // Ligue no evento Drag
     public void DragObject()
     {
-        if (isLocked || objectToDrag == null || canvas == null || pointerPositionAction == null) return;
+        if (isLocked || objectToDrag == null || dragParent == null) return;
 
-        // pega a posicao diretamente do input action configurado no inspector
-        Vector2 mouseScreenPosition = pointerPositionAction.action.ReadValue<Vector2>();
+        // Se ninguem chamou BeginDrag, calcula o offset agora e segue o jogo.
+        if (!isDragging)
+        {
+            BeginDrag();
+            return;
+        }
 
-        // converte a posicao da tela para a posicao exata dentro do canvas
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            canvas.transform as RectTransform,
-            mouseScreenPosition,
-            mainCamera,
-            out Vector2 localPoint
-        );
+        if (!TryGetLocalPoint(out Vector2 localPoint)) return;
 
-        // move o objeto na ui
-        objectToDrag.anchoredPosition = localPoint;
+        objectToDrag.anchoredPosition = localPoint + grabOffset;
     }
 
+
+    // Ligue no evento Pointer Up (ou End Drag)
     public void DropObjects()
     {
         if (isLocked || objectToDrag == null || objectDragToPos == null) return;
 
-        // calcula a distancia diretamente entre as posicoes ancoradas na ui
-        float distance = Vector2.Distance(objectToDrag.anchoredPosition, objectDragToPos.anchoredPosition);
+        isDragging = false;
+
+        if (fadeEnquantoArrasta && dragCanvasGroup != null)
+        {
+            dragCanvasGroup.alpha = 1f;
+            dragCanvasGroup.blocksRaycasts = true;
+        }
+
+        Vector2 dragScreen = RectTransformUtility.WorldToScreenPoint(uiCamera, objectToDrag.position);
+        Vector2 targetScreen = RectTransformUtility.WorldToScreenPoint(uiCamera, objectDragToPos.position);
+        float distance = Vector2.Distance(dragScreen, targetScreen);
 
         if (distance <= dropDistance)
         {
             isLocked = true;
-            // encaixa perfeitamente na posicao do alvo
-            objectToDrag.anchoredPosition = objectDragToPos.anchoredPosition;
+            objectToDrag.position = objectDragToPos.position;
+            objectToDrag.rotation = objectDragToPos.rotation;
+            objectToDrag.localScale = objectDragToPos.localScale;
 
-            // avisa o gerenciador para somar 1 ponto
+
             if (puzzleManager != null)
             {
                 puzzleManager.AdicionarPonto();
@@ -132,8 +121,24 @@ public class DragDrop : MonoBehaviour
         }
         else
         {
-            // retorna para a posicao inicial
             objectToDrag.anchoredPosition = objectInitAnchoredPos;
         }
+    }
+
+
+    private bool TryGetLocalPoint(out Vector2 localPoint)
+    {
+        localPoint = Vector2.zero;
+
+        if (mousePointer == null || dragParent == null) return false;
+
+        Vector2 mouseScreenPosition = mousePointer.ReadValue<Vector2>();
+
+        return RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            dragParent,
+            mouseScreenPosition,
+            uiCamera,
+            out localPoint
+        );
     }
 }
