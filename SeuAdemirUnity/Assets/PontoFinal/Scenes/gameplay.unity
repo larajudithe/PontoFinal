@@ -17834,7 +17834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1187592499
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24787,7 +24787,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
   FireCloneScript: {fileID: 353106447}
-  ExtintorButton: {fileID: 0}
   player: {fileID: 36062382}
 --- !u!64 &1391411623
 MeshCollider:
@@ -30002,7 +30001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1967311871
 Transform:
   m_ObjectHideFlags: 0
