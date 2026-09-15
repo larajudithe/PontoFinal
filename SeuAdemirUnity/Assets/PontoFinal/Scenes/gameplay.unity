@@ -2388,6 +2388,7 @@ GameObject:
   - component: {fileID: 513911505}
   - component: {fileID: 513911504}
   - component: {fileID: 513911507}
+  - component: {fileID: 513911508}
   m_Layer: 5
   m_Name: ExtintorButton
   m_TagString: Untagged
@@ -2477,6 +2478,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenButton
   m_ControlPath: <Keyboard>/enter
+--- !u!114 &513911508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513911502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1857af8c0acc8408b60c5eb8de1e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffAndroid
 --- !u!1001 &528055534
 PrefabInstance:
   m_ObjectHideFlags: 0
