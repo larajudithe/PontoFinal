@@ -8708,17 +8708,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7082387938087709051, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
   m_PrefabInstance: {fileID: 1734582406}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &703364877 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -3511845041093741841, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
-  m_PrefabInstance: {fileID: 1734582406}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703364875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b8c7021062aa084db740d0128ab941b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Tiro
 --- !u!54 &703364881
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8746,6 +8735,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &703364885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703364875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1269024291
+      Data2: 1097326182
+      Data3: -940386392
+      Data4: 1692898737
+    Path: event:/Extintor/Extintor
+  Event: 
+  EventPlayTrigger: 11
+  EventStopTrigger: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &712431240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17773,7 +17793,7 @@ PrefabInstance:
     - target: {fileID: 1057834655664170062, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: TiroScript
       value: 
-      objectReference: {fileID: 703364877}
+      objectReference: {fileID: 0}
     - target: {fileID: 1057834655664170062, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: extintorSound
       value: 
@@ -27646,13 +27666,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -3511845041093741841, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 703364881}
+    - targetCorrespondingSourceObject: {fileID: 6099746949569577576, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 703364885}
   m_SourcePrefab: {fileID: 100100000, guid: cb844b78edca0324daae3d675e2ff1e2, type: 3}
 --- !u!1001 &1746430828
 PrefabInstance:
