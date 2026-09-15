@@ -25335,6 +25335,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AFichaOnibus
       objectReference: {fileID: 0}
+    - target: {fileID: 6399606348869975752, guid: 3cb254ba27e0f554897792518d0cfe56, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
