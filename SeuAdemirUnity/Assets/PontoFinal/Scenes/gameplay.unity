@@ -9957,16 +9957,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833657360}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2089889275}
+  m_Father: {fileID: 1867625044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: -200}
+  m_AnchoredPosition: {x: 813.11554, y: 237.62344}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &833657362
@@ -23774,17 +23774,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275911212}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2089889275}
+  m_Father: {fileID: 1867625044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.84700006, y: 0.19600001}
   m_AnchorMax: {x: 0.92750597, y: 0.34}
-  m_AnchoredPosition: {x: 4, y: 0}
-  m_SizeDelta: {x: -62, y: -49}
+  m_AnchoredPosition: {x: 707.1023, y: -266.075}
+  m_SizeDelta: {x: 101.1236, y: 77.035515}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1275911214
 MonoBehaviour:
@@ -24961,7 +24961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Extintor
   FireCloneScript: {fileID: 353106447}
-  ExtintorButton: {fileID: 0}
+  ExtintorButton: {fileID: 1475286747}
   player: {fileID: 36062382}
 --- !u!64 &1391411623
 MeshCollider:
@@ -25633,6 +25633,108 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2f43df80e95a2e2489d91aaa0497555b, type: 3}
   m_PrefabInstance: {fileID: 1058333341}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1475286747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1475286748}
+  - component: {fileID: 1475286752}
+  - component: {fileID: 1475286751}
+  - component: {fileID: 1475286750}
+  - component: {fileID: 1475286749}
+  m_Layer: 5
+  m_Name: ExtintorButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1475286748
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475286747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1867625044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 856, y: 23}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &1475286749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475286747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1475286750
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475286747}
+  m_CullTransparentMesh: 1
+--- !u!114 &1475286751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475286747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1857af8c0acc8408b60c5eb8de1e38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OffAndroid
+--- !u!114 &1475286752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475286747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.OnScreen.OnScreenButton
+  m_ControlPath: <Keyboard>/enter
 --- !u!4 &1527790520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 702216efa82b7c342aa2fa7a7fb954fd, type: 3}
@@ -25818,17 +25920,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566971878}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 2089889275}
+  m_Father: {fileID: 1867625044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.124000005, y: 0.19600001}
   m_AnchorMax: {x: 0.19900002, y: 0.34}
-  m_AnchoredPosition: {x: 1, y: 0}
-  m_SizeDelta: {x: -50, y: -49}
+  m_AnchoredPosition: {x: -760.86285, y: -266.075}
+  m_SizeDelta: {x: 101.96735, y: 77.035515}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1566971880
 MonoBehaviour:
@@ -29095,6 +29197,45 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b94592a5883ef4042809facfc4129869, type: 3}
   m_PrefabInstance: {fileID: 1862415764}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1867625043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867625044}
+  m_Layer: 5
+  m_Name: AndroidButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1867625044
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867625043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1566971879}
+  - {fileID: 1275911213}
+  - {fileID: 833657361}
+  - {fileID: 1475286748}
+  m_Father: {fileID: 2089889275}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1870978055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9151b961d6fc53a479f838bc8e7c1781, type: 3}
@@ -31309,6 +31450,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 3.0216064
       objectReference: {fileID: 0}
+    - target: {fileID: 5027832469726375848, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5038956906591223710, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -31894,13 +32039,7 @@ PrefabInstance:
       addedObject: {fileID: 1187592499}
     - targetCorrespondingSourceObject: {fileID: 5042628420717449691, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1566971879}
-    - targetCorrespondingSourceObject: {fileID: 5042628420717449691, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1275911213}
-    - targetCorrespondingSourceObject: {fileID: 5042628420717449691, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 833657361}
+      addedObject: {fileID: 1867625044}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5455686748200482151, guid: b563e71f7942eff4d82be43f37c59999, type: 3}
       insertIndex: -1
