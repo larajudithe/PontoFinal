@@ -36,12 +36,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float timePassos;
     private StudioEventEmitter passosSound;
     private Coroutine passosPlaying;
-/*<<<<<<< Updated upstream
-=======
-    /*[SerializeField] Tiro TiroScript;
+    /*<<<<<<< Updated upstream
+    =======
+        /*[SerializeField] Tiro TiroScript;
 
-    int vida = 5;
->>>>>>> Stashed changes*/
+        int vida = 5;
+    >>>>>>> Stashed changes*/
 
     void Awake()
     {
@@ -109,13 +109,14 @@ public class PlayerController : MonoBehaviour
         {
             verticalDirection = Vector3.zero;
         }
-        if(actionExtintor.IsPressed())
+        if (actionExtintor.IsPressed())
         {
-            extintorSound.Play();
+            //  extintorSound.Play();
             TiroObject.SetActive(true);
-        }else
+        }
+        else
         {
-            extintorSound.Stop();
+            // extintorSound.Stop();
             TiroObject.SetActive(false);
         }
 
