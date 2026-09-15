@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices.WindowsRuntime;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
