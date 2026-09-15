@@ -1,6 +1,5 @@
 using System.Collections;
 using FMODUnity;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Input Actions")]
     [SerializeField] private InputActionAsset inputActions; // InputMap
+    [SerializeField] private StudioEventEmitter extintorSound;
     private InputAction actionMove; // Ação move (x e y 0,1)
     private InputAction actionJump; // Ação Jump
     private InputAction actionExtintor; // Atira com o extintor
@@ -117,11 +117,13 @@ public class PlayerController : MonoBehaviour
 
     private void OnHoldPerformed(InputAction.CallbackContext context)
     {
+        extintorSound.Play();
         TiroObject.SetActive(true);
     }
 
     private void OnHoldCanceled(InputAction.CallbackContext context)
     {
+        extintorSound.Stop();
         TiroObject.SetActive(false);
     }
     private IEnumerator PlayPassos(float time)
