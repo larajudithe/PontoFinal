@@ -625,6 +625,17 @@
                 },
                 {
                     "name": "",
+                    "id": "9546f45b-8661-4f4b-b340-b03663ff784e",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Extintor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1ee84d03-aac7-4671-8efb-e085507f7943",
                     "path": "<Keyboard>/escape",
                     "interactions": "",

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using System.Collections;
+using TMPro;
 
 public class PlayerInteractions : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class PlayerInteractions : MonoBehaviour
     private Camera myCamera; // Camera
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] Extintor ExtintorScript;
-    [SerializeField] GameObject androidButtons;
+    [SerializeField] private GameObject androidButtons;
+    [SerializeField] private TextMeshProUGUI debugText;
 
 
     private bool isInteracting = false;
@@ -187,10 +189,12 @@ public class PlayerInteractions : MonoBehaviour
     }
     public void FinishInteraction() // Termina a interação
     {
-        if (Application.platform == RuntimePlatform.Android)
+        /*if (Application.platform == RuntimePlatform.Android)
         {
-            androidButtons.SetActive(true);
-        }
+            //androidButtons.SetActive(true);
+            debugText.text = "Veado0";
+        }*/
+        debugText.text = "FINALIZANDO";
         //Debug.Log("Finalizou interação");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
