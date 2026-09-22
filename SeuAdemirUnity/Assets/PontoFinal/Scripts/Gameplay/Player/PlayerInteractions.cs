@@ -36,7 +36,7 @@ public class PlayerInteractions : MonoBehaviour
     [SerializeField] private AudioPlayer audioPlayer;
     [SerializeField] Extintor ExtintorScript;
     [SerializeField] private GameObject androidButtons;
-    [SerializeField] private TextMeshProUGUI debugText;
+    //[SerializeField] private TextMeshProUGUI debugText;
 
 
     private bool isInteracting = false;
@@ -89,16 +89,18 @@ public class PlayerInteractions : MonoBehaviour
                     }
                     StartInteraction(objectInterativo); // Começa interação
                 }
-            }else
+            }
+            else
             {
                 UIManager.Instance.ChangeInteract(false); // Desativa o cursor de interação
             }
-            
-        }else
+
+        }
+        else
         {
             UIManager.Instance.ChangeInteract(false); // Desativa o cursor de interação
         }
-        
+
     }
     private void StartInteraction(ObjectInterativo objeto) // Inicia interação com o objeto
     {
@@ -119,13 +121,13 @@ public class PlayerInteractions : MonoBehaviour
             //     Debug.Log("Extintor pegavel");
             // }
             // }
-            
-        
+
+
             isInteracting = true; // Ativa a interação
             bool hasPreviousItem = false; // Existe interações anteriores
             for (int i = 0; i < currentInteraction.IntAnterioresLenght(); i++) // Verifica todas as ações anteriores
             {
-                if(PlayerInventory.Instance.CheckItem(currentInteraction.GetIntAnteriores(i).GetItemRequirido())) // Verifica se item para a interação está no inventário
+                if (PlayerInventory.Instance.CheckItem(currentInteraction.GetIntAnteriores(i).GetItemRequirido())) // Verifica se item para a interação está no inventário
                 {
                     Interact(currentInteraction.GetIntAnteriores(i).GetInterativoAtual()); // Interage
                     currentInteraction.GetIntAnteriores(i).OnInteractAtual.Invoke(); // Evento de interação
@@ -174,7 +176,8 @@ public class PlayerInteractions : MonoBehaviour
                 FinishInteraction();
             }
             UIManager.Instance.SetCaptions("");
-        }else
+        }
+        else
         {
             if (Application.platform == RuntimePlatform.Android)
             {
@@ -194,7 +197,7 @@ public class PlayerInteractions : MonoBehaviour
             //androidButtons.SetActive(true);
             debugText.text = "Veado0";
         }*/
-        debugText.text = "FINALIZANDO";
+        // debugText.text = "FINALIZANDO";
         //Debug.Log("Finalizou interação");
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
