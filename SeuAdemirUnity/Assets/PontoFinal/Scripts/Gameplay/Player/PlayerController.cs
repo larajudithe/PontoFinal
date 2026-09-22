@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     GameObject clone;
     [SerializeField] private float timePassos;
     [SerializeField] private float extTime;
+    private Coroutine extCourotine;
     private StudioEventEmitter passosSound;
     private Coroutine passosPlaying;
     /*<<<<<<< Updated upstream
@@ -110,14 +111,18 @@ public class PlayerController : MonoBehaviour
         {
             verticalDirection = Vector3.zero;
         }
-        if (actionExtintor.IsPressed())
+        if (actionExtintor.WasPressedThisFrame())
         {
             //  extintorSound.Play();
             StartCoroutine(OffExtintor(extTime, TiroObject));
         }
-        else
+        else if (actionExtintor.WasReleasedThisFrame())
         {
             // extintorSound.Stop();
+            if (extCourotine != null)
+            {
+                StopCoroutine(extCourotine);
+            }
             TiroObject.SetActive(false);
         }
 
@@ -146,7 +151,7 @@ public class PlayerController : MonoBehaviour
     {
         TiroObject.SetActive(true);
         yield return new WaitForSeconds(time);
-        tiroObjet.SetActive(false);
-        Debug.Log("Ext");
+        TiroObject.SetActive(false);
+        //Debug.Log("Ext");
     }
 }
