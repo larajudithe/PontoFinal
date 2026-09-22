@@ -12,6 +12,12 @@ public class Janela : MonoBehaviour
 
     public IEnumerator Interagir()
     {
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.SetCaptions("Feche as Janelas e colete os bilhetes");
+        }
+
         finalPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + sidePositionsZ);
         float time = 0;
 
@@ -22,6 +28,11 @@ public class Janela : MonoBehaviour
             yield return null;
         }
         transform.position = finalPosition;
+
+        if (UIManager.Instance != null)
+        {
+            UIManager.Instance.SetCaptions("Veja seu inventario");
+        }
 
     }
 
