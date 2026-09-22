@@ -18112,6 +18112,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1057834655664170062, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
+      propertyPath: extTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1057834655664170062, guid: 5ada3f97515505d4cba1f9c0c7bec211, type: 3}
       propertyPath: Extintor
       value: 
       objectReference: {fileID: 1391411610}

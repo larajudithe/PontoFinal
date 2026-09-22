@@ -8,7 +8,7 @@ public class OffAndroid : MonoBehaviour
         if (Application.platform != RuntimePlatform.Android)
         {
             gameObject.SetActive(false);
-            Debug.Log("Desativa");
+            //Debug.Log("Desativa");
         }
     }
 

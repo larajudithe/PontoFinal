@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public Transform Extintor;
     GameObject clone;
     [SerializeField] private float timePassos;
+    [SerializeField] private float extTime;
     private StudioEventEmitter passosSound;
     private Coroutine passosPlaying;
     /*<<<<<<< Updated upstream
@@ -112,7 +113,7 @@ public class PlayerController : MonoBehaviour
         if (actionExtintor.IsPressed())
         {
             //  extintorSound.Play();
-            TiroObject.SetActive(true);
+            StartCoroutine(OffExtintor(extTime, TiroObject));
         }
         else
         {
@@ -140,5 +141,12 @@ public class PlayerController : MonoBehaviour
         passosSound.Play();
         yield return new WaitForSeconds(time);
         passosPlaying = null;
+    }
+    private IEnumerator OffExtintor(float time, GameObject tiroObjet)
+    {
+        TiroObject.SetActive(true);
+        yield return new WaitForSeconds(time);
+        tiroObjet.SetActive(false);
+        Debug.Log("Ext");
     }
 }
