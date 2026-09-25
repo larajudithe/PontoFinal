@@ -47,10 +47,10 @@ public class DragDrop : MonoBehaviour
             objectInitAnchoredPos = objectToDrag.anchoredPosition;
         }
 
-        if (mousePointer == null)
-        {
-            Debug.LogError("DragDrop: action 'position' não encontrada no Input Actions.", this);
-        }
+      //  if (mousePointer == null)
+      //  {
+      //      Debug.LogError("DragDrop: action 'position' não encontrada no Input Actions.", this);
+     //   }
     }
 
 
